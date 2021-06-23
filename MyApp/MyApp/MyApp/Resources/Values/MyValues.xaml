@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.Resources.Values.MyValues"
+             xmlns:converter="clr-namespace:MyApp.Converters">
+
+    <!-- 
+    converters
+    =======================================-->
+    <converter:ReverseValueConverter x:Key="reverseValueConverter"/>
+    <!-- end converters -->
+
+    <!-- 
+    colors
+    =======================================-->
+    <Color x:Key="primary">#ffffff</Color>
+    <Color x:Key="secondary">#F5F5F5</Color>
+
+
+    <Color x:Key="primary-text">#1a1a1a</Color>
+    <Color x:Key="secondary-text">#6a6a6a</Color>
+    <Color x:Key="middle-text">#0075a3</Color>
+
+    <Color x:Key="border-dark">#6a6a6a</Color>
+    <Color x:Key="border-light">#dbdbdb</Color>
+    <Color x:Key="placeholder">#6a6a6a</Color>
+
+
+    <Color x:Key="btn-bg">#00bc00</Color>
+
+    <Color x:Key="bar-bg">#00bc00</Color>
+    <Color x:Key="bar-text">#ffffff</Color>
+
+
+
+    <Color x:Key="success">#28a745</Color>
+    <Color x:Key="info">#17a2b8</Color>
+    <Color x:Key="warning">#ffc107</Color>
+    <Color x:Key="danger">#dc3545</Color>
+    <Color x:Key="light">#f8f9fa</Color>
+    <Color x:Key="dark">#343a40</Color>
+
+
+
+    <Color x:Key="red">#dc3545</Color>
+    <Color x:Key="orange">#fd7e14</Color>
+    <Color x:Key="yellow">#ffc107</Color>
+    <Color x:Key="green">#28a745</Color>
+    <Color x:Key="blue">#007bff</Color>
+    <Color x:Key="white">#fff</Color>
+    <Color x:Key="gray">#6c757d</Color>
+    <Color x:Key="gray-dark">#343a40</Color>
+    <Color x:Key="indigo">#6610f2</Color>
+    <Color x:Key="purple">#6f42c1</Color>
+    <Color x:Key="pink">#e83e8c</Color>
+    <Color x:Key="teal">#20c997</Color>
+    <Color x:Key="cyan">#17a2b8</Color>
+    <!-- end colors -->
+
+
+
+    <!-- 
+    string 
+    =======================================-->
+    <x:String x:Key="appName">Green</x:String>
+    <!-- end string -->
+
+
+
+    <!-- 
+    double 
+    =======================================-->
+    <x:Double x:Key="font-sm">10</x:Double>
+    <x:Double x:Key="font-md">12</x:Double>
+    <x:Double x:Key="font-lg">14</x:Double>
+
+    <!-- end double -->
+
+</ResourceDictionary>
