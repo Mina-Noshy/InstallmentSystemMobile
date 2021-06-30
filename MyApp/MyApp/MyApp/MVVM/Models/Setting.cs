@@ -9,8 +9,8 @@ namespace MyApp.MVVM.Models
     {
         [PrimaryKey, AutoIncrement]
         public int id { get; set; }
-        public string address { get; set; } = null;
         public string userId { get; set; } = null;
+        public string address { get; set; } = null;
         public string userName { get; set; } = null;
         public string email { get; set; } = null;
         public string password { get; set; }

@@ -6,8 +6,6 @@ namespace MyApp.MVVM.ViewModels
 {
     public class RegisterVM
     {
-        public int cityId { get; set; }
-        public int userTypeId { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string userName { get; set; }

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Button xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.Controls.button_sm"
+        
+             CornerRadius="6"
+             BackgroundColor="{StaticResource btn-bg}"
+             HorizontalOptions="FillAndExpand"
+             BorderWidth="1"
+             FontSize="{StaticResource font-sm}"
+             BorderColor="{StaticResource secondary}"
+             TextColor="{StaticResource primary}"
+             HeightRequest="35"
+             VerticalOptions="Center"
+             Padding="0">
+
+    
+</Button>

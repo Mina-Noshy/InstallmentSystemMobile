@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.MVVM.Views.Account.LoginPage"
+             BackgroundColor="{StaticResource primary}"
+             xmlns:controls="clr-namespace:MyApp.Controls;assembly=MyApp"
+             xmlns:components="clr-namespace:MyApp.Components;assembly=MyApp"
+             xmlns:resx="clr-namespace:MyApp.Resources.Languages;assembly=MyApp"
+             Title="{x:Static resx:AppResource.login}"
+             FlowDirection="{x:Static Device.FlowDirection}">
+
+ 
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="splash_logo"/>
+    </ContentPage.ToolbarItems>
+
+
+    <ScrollView>
+        <StackLayout Padding="20">
+            <StackLayout>
+
+                <!--banner-->
+                <components:bannerView />
+
+                <!--indicator-->
+                <ActivityIndicator x:Name="indicator" Color="{StaticResource secondary-text}" IsRunning="False" IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning}"/>
+
+                <Label Text="{x:Static resx:AppResource.pleaseWait}" TextColor="{StaticResource secondary-text}" 
+                   IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning}"
+                   HorizontalTextAlignment="Center"
+                   Margin="30"/>
+
+                <StackLayout Orientation="Horizontal">
+
+                    <Label x:Name="lblLogin" 
+                           Text="{x:Static resx:AppResource.login}" 
+                           FontSize="26" 
+                           FontAttributes="Bold"
+                           TextColor="{StaticResource primary-text}" 
+                           HorizontalOptions="StartAndExpand"/>
+
+                    <Switch x:Name="swhLogin" 
+                            OnColor="{StaticResource warning}"
+                            ThumbColor="{StaticResource danger}" 
+                            HorizontalOptions="End"
+                            Toggled="swhLogin_Toggled"/>
+
+                </StackLayout>
+
+
+
+                <Label Text="{x:Static resx:AppResource.mobileOrEmail}"
+                       TextColor="{StaticResource primary-text}"/>
+                <controls:frame>
+                    <StackLayout Orientation="Horizontal">
+                        <controls:entry
+                              x:Name="txtUserName"/>
+                    </StackLayout>
+                </controls:frame>
+
+                <StackLayout IsVisible="{Binding Source={x:Reference swhLogin}, Path=IsToggled}">
+                    <Label Text="{x:Static resx:AppResource.fullName}"
+                       TextColor="{StaticResource primary-text}"/>
+                    <controls:frame>
+                        <StackLayout Orientation="Horizontal">
+                            <controls:entry
+                              x:Name="txtFullName"/>
+                        </StackLayout>
+                    </controls:frame>
+                </StackLayout>
+
+                <Label Text="{x:Static resx:AppResource.password}"
+                       TextColor="{StaticResource primary-text}"/>
+                <controls:frame>
+                    <StackLayout Orientation="Horizontal">
+                        <controls:entry
+                            IsPassword="True"
+                              x:Name="txtPassword"/>
+                    </StackLayout>
+                </controls:frame>
+
+                <StackLayout IsVisible="{Binding Source={x:Reference swhLogin}, Path=IsToggled}">
+                    <Label Text="{x:Static resx:AppResource.confirmPassword}"
+                       TextColor="{StaticResource primary-text}"/>
+                    <controls:frame>
+                        <StackLayout Orientation="Horizontal">
+                            <controls:entry
+                                IsPassword="True"
+                              x:Name="txtConfirmPassword"/>
+                        </StackLayout>
+                    </controls:frame>
+                </StackLayout>
+
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" VerticalOptions="EndAndExpand">
+
+                <controls:seperator />
+
+
+                <controls:button_lg
+                         x:Name="btnLogin"
+                         Text="{x:Static resx:AppResource.login}"
+                         Clicked="btnLogin_Clicked"/>
+
+                <Button x:Name="btnStart" 
+                        BackgroundColor="Transparent"
+                        Text="{x:Static resx:AppResource.temporaryEntry}"
+                        Clicked="btnStart_Clicked"
+                        TextColor="{StaticResource middle-text}"/>
+
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

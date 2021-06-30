@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Editor xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.Controls.editor"
+             HorizontalOptions="FillAndExpand"
+             AutoSize="TextChanges"
+             HeightRequest="80"
+             PlaceholderColor="{StaticResource placeholder}"
+             MaxLength="300">
+
+</Editor>

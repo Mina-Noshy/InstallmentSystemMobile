@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.Components.bannerView"
+             xmlns:resx="clr-namespace:MyApp.Resources.Languages;assembly=MyApp">
+
+    <StackLayout>
+        <Frame CornerRadius="60" 
+                       BackgroundColor="Transparent"
+                       HeightRequest="120"
+                       WidthRequest="120"
+                       HorizontalOptions="Center"
+                       Padding="0"
+                       IsClippedToBounds="True">
+
+            <Image Source="splash_logo"
+                           HorizontalOptions="Center"
+                           Aspect="AspectFill"
+                           VerticalOptions="Center" />
+        </Frame>
+
+        <Label Text="{x:Static resx:AppResource.appName}" 
+                           HorizontalTextAlignment="Center" 
+                           TextColor="{StaticResource middle-text}" 
+                           FontAttributes="Bold"
+                           FontSize="30"/>
+        
+    </StackLayout>
+
+</ContentView>

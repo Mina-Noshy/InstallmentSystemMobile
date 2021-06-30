@@ -26,9 +26,9 @@
     <Color x:Key="placeholder">#6a6a6a</Color>
 
 
-    <Color x:Key="btn-bg">#00bc00</Color>
+    <Color x:Key="btn-bg">#007bff</Color>
 
-    <Color x:Key="bar-bg">#00bc00</Color>
+    <Color x:Key="bar-bg">#007bff</Color>
     <Color x:Key="bar-text">#ffffff</Color>
 
 

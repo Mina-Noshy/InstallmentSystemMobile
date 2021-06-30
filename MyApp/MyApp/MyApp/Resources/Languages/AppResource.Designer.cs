@@ -169,7 +169,7 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Green Trader.
+        ///   Looks up a localized string similar to Mina Top.
         /// </summary>
         internal static string appName {
             get {

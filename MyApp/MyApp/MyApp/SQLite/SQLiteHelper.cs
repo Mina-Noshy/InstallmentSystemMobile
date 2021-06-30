@@ -28,6 +28,10 @@ namespace MyApp.SQLite
 
             Connection.CreateTable<Setting>(CreateFlags.None);
 
+            Connection.CreateTable<Client>(CreateFlags.None);
+            Connection.CreateTable<Bill>(CreateFlags.None);
+            Connection.CreateTable<Installment>(CreateFlags.None);
+
             InitialDb();
 
         }
