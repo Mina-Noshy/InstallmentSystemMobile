@@ -1,12 +1,71 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyApp.MVVM.Views.Client.ClientsPage">
-    <ContentPage.Content>
+             x:Class="MyApp.MVVM.Views.Client.ClientsPage"
+             BackgroundColor="{StaticResource primary}"
+             xmlns:control="clr-namespace:MyApp.Controls;assembly=MyApp"
+             xmlns:resx="clr-namespace:MyApp.Resources.Languages;assembly=MyApp"
+             Title="{x:Static resx:AppResource.clients}"
+             FlowDirection="{x:Static Device.FlowDirection}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="{x:Static resx:AppResource.add}" Clicked="ToolbarItem_Clicked"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <Frame Padding="1" 
+                    BorderColor="{StaticResource border-light}" 
+                    VerticalOptions="Center" HeightRequest="40">
+
+                <SearchBar x:Name="txtSearch" 
+                            Placeholder="{x:Static resx:AppResource.writeHereToSearch}"
+                            PlaceholderColor="{StaticResource secondary-text}"
+                            TextColor="{StaticResource primary-text}"
+                            SearchButtonPressed="txtSearch_SearchButtonPressed"
+                           TextChanged="txtSearch_TextChanged"/>
+            </Frame>
+
+            <ListView x:Name="lstClient" 
+                      HasUnevenRows="True" 
+                      SelectionMode="Single"
+                      ItemSelected="lstClient_ItemSelected"
+                      IsPullToRefreshEnabled="True"
+                      Refreshing="lstClient_Refreshing">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <Frame BackgroundColor="{StaticResource secondary}"
+                                   BorderColor="{StaticResource border-light}"
+                                   CornerRadius="5"
+                                   Margin="2"
+                                   Padding="5"
+                                   HorizontalOptions="FillAndExpand">
+
+                                <StackLayout Orientation="Horizontal">
+
+                                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                        <Label Text="{Binding name}" 
+                                               FontAttributes="Bold"
+                                               TextColor="{StaticResource primary-text}"/>
+
+                                        <Label Text="{Binding address}"
+                                               TextColor="{StaticResource secondary-text}"/>
+                                    </StackLayout>
+
+                                </StackLayout>
+
+                            </Frame>
+
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
+    
 </ContentPage>

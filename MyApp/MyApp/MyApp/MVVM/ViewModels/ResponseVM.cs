@@ -6,7 +6,8 @@ namespace MyApp.MVVM.ViewModels
 {
     public class ResponseVM
     {
-        public string status { get; set; }
+        public bool state { get; set; }
+        public string title { get; set; }
         public string message { get; set; }
     }
 }

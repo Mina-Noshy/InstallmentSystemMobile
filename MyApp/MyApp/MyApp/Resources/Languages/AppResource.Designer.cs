@@ -79,6 +79,24 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add bill.
+        /// </summary>
+        internal static string addBill {
+            get {
+                return ResourceManager.GetString("addBill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Add client.
+        /// </summary>
+        internal static string addClient {
+            get {
+                return ResourceManager.GetString("addClient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Added successfully.
         /// </summary>
         internal static string addedSuccessfully {
@@ -160,6 +178,69 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to All installments at day.
+        /// </summary>
+        internal static string allInDay {
+            get {
+                return ResourceManager.GetString("allInDay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All received installments today.
+        /// </summary>
+        internal static string allReceivedToday {
+            get {
+                return ResourceManager.GetString("allReceivedToday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All today installments.
+        /// </summary>
+        internal static string allToday {
+            get {
+                return ResourceManager.GetString("allToday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All unreceived installments.
+        /// </summary>
+        internal static string allUnReceived {
+            get {
+                return ResourceManager.GetString("allUnReceived", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All unreceived installments today.
+        /// </summary>
+        internal static string allUnReceivedToday {
+            get {
+                return ResourceManager.GetString("allUnReceivedToday", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amount paid.
+        /// </summary>
+        internal static string amountPaid {
+            get {
+                return ResourceManager.GetString("amountPaid", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Amount value.
+        /// </summary>
+        internal static string amountValue {
+            get {
+                return ResourceManager.GetString("amountValue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sell your products from your place.
         /// </summary>
         internal static string appDescription {
@@ -196,11 +277,65 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Bill.
+        /// </summary>
+        internal static string bill {
+            get {
+                return ResourceManager.GetString("bill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bill date.
+        /// </summary>
+        internal static string billDate {
+            get {
+                return ResourceManager.GetString("billDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bill details.
+        /// </summary>
+        internal static string billDetails {
+            get {
+                return ResourceManager.GetString("billDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bill installments.
+        /// </summary>
+        internal static string billInstallments {
+            get {
+                return ResourceManager.GetString("billInstallments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Bills.
+        /// </summary>
+        internal static string bills {
+            get {
+                return ResourceManager.GetString("bills", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
         internal static string cancel {
             get {
                 return ResourceManager.GetString("cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cancel receive.
+        /// </summary>
+        internal static string cancelReceive {
+            get {
+                return ResourceManager.GetString("cancelReceive", resourceCulture);
             }
         }
         
@@ -219,6 +354,51 @@ namespace MyApp.Resources.Languages {
         internal static string city {
             get {
                 return ResourceManager.GetString("city", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Client.
+        /// </summary>
+        internal static string client {
+            get {
+                return ResourceManager.GetString("client", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Client bills.
+        /// </summary>
+        internal static string clientBills {
+            get {
+                return ResourceManager.GetString("clientBills", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Client details.
+        /// </summary>
+        internal static string clientDetails {
+            get {
+                return ResourceManager.GetString("clientDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Client name.
+        /// </summary>
+        internal static string clientName {
+            get {
+                return ResourceManager.GetString("clientName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clients.
+        /// </summary>
+        internal static string clients {
+            get {
+                return ResourceManager.GetString("clients", resourceCulture);
             }
         }
         
@@ -295,11 +475,65 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Daily.
+        /// </summary>
+        internal static string daily {
+            get {
+                return ResourceManager.GetString("daily", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Days of delay.
+        /// </summary>
+        internal static string daysOfDelay {
+            get {
+                return ResourceManager.GetString("daysOfDelay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delay fine.
+        /// </summary>
+        internal static string delayFine {
+            get {
+                return ResourceManager.GetString("delayFine", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delay fine type.
+        /// </summary>
+        internal static string delayFineType {
+            get {
+                return ResourceManager.GetString("delayFineType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Delete.
         /// </summary>
         internal static string delete {
             get {
                 return ResourceManager.GetString("delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete bill.
+        /// </summary>
+        internal static string deleteBill {
+            get {
+                return ResourceManager.GetString("deleteBill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Client.
+        /// </summary>
+        internal static string deleteClient {
+            get {
+                return ResourceManager.GetString("deleteClient", resourceCulture);
             }
         }
         
@@ -349,11 +583,38 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Due date.
+        /// </summary>
+        internal static string dueDate {
+            get {
+                return ResourceManager.GetString("dueDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Edit.
         /// </summary>
         internal static string edit {
             get {
                 return ResourceManager.GetString("edit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit bill.
+        /// </summary>
+        internal static string editBill {
+            get {
+                return ResourceManager.GetString("editBill", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit client.
+        /// </summary>
+        internal static string editClient {
+            get {
+                return ResourceManager.GetString("editClient", resourceCulture);
             }
         }
         
@@ -502,6 +763,51 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Installment.
+        /// </summary>
+        internal static string installment {
+            get {
+                return ResourceManager.GetString("installment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installment count.
+        /// </summary>
+        internal static string installmentCount {
+            get {
+                return ResourceManager.GetString("installmentCount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installment details.
+        /// </summary>
+        internal static string installmentDetails {
+            get {
+                return ResourceManager.GetString("installmentDetails", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installments.
+        /// </summary>
+        internal static string installments {
+            get {
+                return ResourceManager.GetString("installments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Installment type.
+        /// </summary>
+        internal static string installmentType {
+            get {
+                return ResourceManager.GetString("installmentType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Last Name.
         /// </summary>
         internal static string lastName {
@@ -601,11 +907,29 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Monthly.
+        /// </summary>
+        internal static string monthly {
+            get {
+                return ResourceManager.GetString("monthly", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to My Offers.
         /// </summary>
         internal static string myOffers {
             get {
                 return ResourceManager.GetString("myOffers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Name.
+        /// </summary>
+        internal static string name {
+            get {
+                return ResourceManager.GetString("name", resourceCulture);
             }
         }
         
@@ -673,6 +997,15 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Original amount.
+        /// </summary>
+        internal static string originalAmount {
+            get {
+                return ResourceManager.GetString("originalAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Owner Name.
         /// </summary>
         internal static string ownerName {
@@ -718,6 +1051,15 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Percentage.
+        /// </summary>
+        internal static string percentage {
+            get {
+                return ResourceManager.GetString("percentage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Personal Information.
         /// </summary>
         internal static string personalInfo {
@@ -741,6 +1083,15 @@ namespace MyApp.Resources.Languages {
         internal static string phoneSoShort {
             get {
                 return ResourceManager.GetString("phoneSoShort", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please call 01111257052 to activate your account.
+        /// </summary>
+        internal static string pleaseCallToActivateAccount {
+            get {
+                return ResourceManager.GetString("pleaseCallToActivateAccount", resourceCulture);
             }
         }
         
@@ -943,6 +1294,33 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Receive.
+        /// </summary>
+        internal static string receive {
+            get {
+                return ResourceManager.GetString("receive", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Received.
+        /// </summary>
+        internal static string received {
+            get {
+                return ResourceManager.GetString("received", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Received date.
+        /// </summary>
+        internal static string receivedDate {
+            get {
+                return ResourceManager.GetString("receivedDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Register.
         /// </summary>
         internal static string register {
@@ -957,6 +1335,15 @@ namespace MyApp.Resources.Languages {
         internal static string required {
             get {
                 return ResourceManager.GetString("required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Rest amount.
+        /// </summary>
+        internal static string restAmount {
+            get {
+                return ResourceManager.GetString("restAmount", resourceCulture);
             }
         }
         
@@ -1033,6 +1420,33 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure to delete this item?.
+        /// </summary>
+        internal static string sureToDelete {
+            get {
+                return ResourceManager.GetString("sureToDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to edit this item?.
+        /// </summary>
+        internal static string sureToEdit {
+            get {
+                return ResourceManager.GetString("sureToEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure to update this item?.
+        /// </summary>
+        internal static string sureToUpdate {
+            get {
+                return ResourceManager.GetString("sureToUpdate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Temporary Entry.
         /// </summary>
         internal static string temporaryEntry {
@@ -1047,6 +1461,24 @@ namespace MyApp.Resources.Languages {
         internal static string toBuy {
             get {
                 return ResourceManager.GetString("toBuy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total amount.
+        /// </summary>
+        internal static string totalAmount {
+            get {
+                return ResourceManager.GetString("totalAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total delay fine.
+        /// </summary>
+        internal static string totalDelayFine {
+            get {
+                return ResourceManager.GetString("totalDelayFine", resourceCulture);
             }
         }
         
@@ -1146,6 +1578,15 @@ namespace MyApp.Resources.Languages {
         internal static string writeHereToSearch {
             get {
                 return ResourceManager.GetString("writeHereToSearch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Yearly.
+        /// </summary>
+        internal static string yearly {
+            get {
+                return ResourceManager.GetString("yearly", resourceCulture);
             }
         }
         

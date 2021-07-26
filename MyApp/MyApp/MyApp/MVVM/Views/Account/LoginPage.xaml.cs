@@ -45,10 +45,10 @@ namespace MyApp.MVVM.Views.Account
 
         }
 
-        private void btnStart_Clicked(object sender, EventArgs e)
-        {
-            Application.Current.MainPage = new NavigationPage(new MainTabbedPage());
-        }
+        //private void btnStart_Clicked(object sender, EventArgs e)
+        //{
+        //    Application.Current.MainPage = new NavigationPage(new MainTabbedPage());
+        //}
 
         async void btnLogin_Clicked(object sender, EventArgs e)
         {
@@ -94,6 +94,18 @@ namespace MyApp.MVVM.Views.Account
             if (!_authModel.isAuthenticated)
             {
                 await DisplayAlert("", resx.AppResource.userOrPassIncorrect, resx.AppResource.ok);
+                return;
+            }
+
+            if (_authModel.roles is null)
+            {
+                await DisplayAlert("", resx.AppResource.pleaseCallToActivateAccount, resx.AppResource.ok);
+                return;
+            }
+
+            if (_authModel.roles.Count == 0)
+            {
+                await DisplayAlert("", resx.AppResource.pleaseCallToActivateAccount, resx.AppResource.ok);
                 return;
             }
 
@@ -148,7 +160,7 @@ namespace MyApp.MVVM.Views.Account
 
             await Task.Delay(100);
 
-            if (response.status.ToLower().Contains("success"))
+            if (response.state)
             {
                 AuthenticationVM _authModel = await EastariaHelper.GetToken(_regesterModel.email, _regesterModel.password);
 
@@ -157,6 +169,18 @@ namespace MyApp.MVVM.Views.Account
                 if (!_authModel.isAuthenticated)
                 {
                     await DisplayAlert("", resx.AppResource.somethingWrong, resx.AppResource.ok);
+                    return;
+                }
+
+                if (_authModel.roles is null)
+                {
+                    await DisplayAlert("", resx.AppResource.pleaseCallToActivateAccount, resx.AppResource.ok);
+                    return;
+                }
+
+                if (_authModel.roles.Count == 0)
+                {
+                    await DisplayAlert("", resx.AppResource.pleaseCallToActivateAccount, resx.AppResource.ok);
                     return;
                 }
 

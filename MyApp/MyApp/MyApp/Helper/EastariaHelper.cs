@@ -1,9 +1,11 @@
-﻿using MyApp.MVVM.ViewModels;
+﻿using MyApp.MVVM.Models.StandardModels;
+using MyApp.MVVM.ViewModels;
 using MyApp.Services.APIServices;
 using MyApp.Services.SQLiteServices;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
@@ -12,18 +14,14 @@ namespace MyApp.Helper
 {
     public static class EastariaHelper
     {
-        private static AccountServices apiAccount = new AccountServices();
-        public static SQLiteSettingServices settingServices = new SQLiteSettingServices();
-
         // =============> properties <=============
         public static Uri BaseUri = new Uri("http://eastaria.com/api/");
         public static string Lang { get; set; } = CultureInfo.CurrentUICulture.TwoLetterISOLanguageName;
 
 
-        // image paths
-        public static string ImgCatPath = "http://www.eastaria.com/Images/Category/";
-        public static string ImgGreenPath = "http://www.eastaria.com/Images/Green/";
-        public static string ImgOfferPath = "http://www.eastaria.com/Images/Offer/";
+        private static AccountServices apiAccount = new AccountServices();
+        public static SQLiteSettingServices settingServices = new SQLiteSettingServices();
+
 
         // =============> lists <=============
 
@@ -93,6 +91,7 @@ namespace MyApp.Helper
 
             _settings.firstName = _authModel.firstName;
             _settings.lastName = _authModel.lastName;
+            _settings.stopAt = _authModel.stopAt;
 
             _settings.isAuthenticated = _authModel.isAuthenticated;
             _settings.token = _authModel.token;
@@ -110,6 +109,14 @@ namespace MyApp.Helper
             settingServices.Update(_settings);
 
             return _authModel;
+        }
+
+        public static List<string> GetInstallmentTypes()
+        {
+            if (Lang == "ar")
+                return Enum.GetValues(typeof(InstallmentTypes)).Cast<string>().ToList();
+            else
+                return Enum.GetValues(typeof(InstallmentTypesEN)).Cast<string>().ToList();
         }
     }
 }

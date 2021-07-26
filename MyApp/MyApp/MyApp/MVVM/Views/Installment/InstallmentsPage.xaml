@@ -1,12 +1,113 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyApp.MVVM.Views.Installment.InstallmentsPage">
-    <ContentPage.Content>
+             x:Class="MyApp.MVVM.Views.Installment.InstallmentsPage"
+             BackgroundColor="{StaticResource primary}"
+             xmlns:control="clr-namespace:MyApp.Controls;assembly=MyApp"
+             xmlns:resx="clr-namespace:MyApp.Resources.Languages;assembly=MyApp"
+             Title="{x:Static resx:AppResource.installments}"
+             FlowDirection="{x:Static Device.FlowDirection}">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="splash_logo" />
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <StackLayout>
+                <RadioButton x:Name="rdoAllUnReceived" 
+                             Content="{x:Static resx:AppResource.allUnReceived}" 
+                             GroupName="search" 
+                             CheckedChanged="rdoAllUnReceived_CheckedChanged"/>
+                
+                <RadioButton x:Name="rdoAllToday" 
+                             Content="{x:Static resx:AppResource.allToday}" 
+                             GroupName="search"
+                             CheckedChanged="rdoAllUnReceived_CheckedChanged"/>
+                
+                <RadioButton x:Name="rdoAllUnReceivedToday" 
+                             Content="{x:Static resx:AppResource.allUnReceivedToday}" 
+                             GroupName="search"
+                             CheckedChanged="rdoAllUnReceived_CheckedChanged"/>
+                
+                <RadioButton x:Name="rdoAllReceivedToday" 
+                             Content="{x:Static resx:AppResource.allReceivedToday}" 
+                             GroupName="search"
+                             CheckedChanged="rdoAllUnReceived_CheckedChanged"/>
+                
+                <RadioButton x:Name="rdoAllInDay" 
+                             Content="{x:Static resx:AppResource.allInDay}" 
+                             GroupName="search"
+                             CheckedChanged="rdoAllUnReceived_CheckedChanged"/>
+
+                <Frame Padding="10,0" Margin="2"
+                       IsVisible="{Binding Source={x:Reference rdoAllInDay}, Path=IsChecked}"
+                       BorderColor="{StaticResource border-dark}">
+                    <StackLayout Orientation="Horizontal">
+                        <DatePicker x:Name="picDay" Format="dd/MM/yyyy" HorizontalOptions="FillAndExpand"/>
+                        <control:button_sm x:Name="btnSearch" 
+                                           WidthRequest="80" 
+                                           HorizontalOptions="End" 
+                                           Text="{x:Static resx:AppResource.search}"
+                                           Clicked="btnSearch_Clicked"/>
+                    </StackLayout>
+                </Frame>
+                                
+            </StackLayout>
+
+            <ListView x:Name="lstInstallments" 
+                      HasUnevenRows="True" 
+                      SelectionMode="Single"
+                      ItemSelected="lstInstallments_ItemSelected">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <Frame BackgroundColor="{StaticResource secondary}"
+                                   BorderColor="{Binding receivedDate, Converter={StaticResource receivingStateConverter}}"
+                                   CornerRadius="5"
+                                   Margin="2"
+                                   Padding="5"
+                                   HorizontalOptions="FillAndExpand">
+
+                                <StackLayout Orientation="Horizontal">
+
+                                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                        <Label FontAttributes="Bold"
+                                               TextColor="{Binding dueDate, Converter={StaticResource requiredStateConverter}}">
+                                            <Label.Text>
+                                                <MultiBinding StringFormat="{}{0} ({1})">
+                                                    <Binding Path="client" />
+                                                    <Binding Path="amountValue" />
+                                                </MultiBinding>
+                                            </Label.Text>
+                                        </Label>
+
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label TextColor="{StaticResource secondary-text}"
+                                               Text="{Binding dueDate, StringFormat='{0:dd MMMM, yyyy}'}"/>
+
+                                            <Label TextColor="{StaticResource secondary-text}"
+                                               Text="{Binding receivedDate, StringFormat='{0:dd MMMM, yyyy}'}"/>
+                                        </StackLayout>
+
+
+                                    </StackLayout>
+
+                                </StackLayout>
+
+                            </Frame>
+
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
         </StackLayout>
-    </ContentPage.Content>
+    </ScrollView>
+
 </ContentPage>

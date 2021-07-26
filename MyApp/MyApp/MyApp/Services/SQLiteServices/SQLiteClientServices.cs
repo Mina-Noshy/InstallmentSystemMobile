@@ -10,6 +10,8 @@ namespace MyApp.Services.SQLiteServices
     {
         List<Client> GetAll();
 
+        List<Client> GetAll(string txt);
+
         int AddAll(List<Client> clients);
 
         int DeleteAll();
@@ -27,6 +29,12 @@ namespace MyApp.Services.SQLiteServices
         {
             return db.Table<Client>().ToList();
         }
+
+        public List<Client> GetAll(string txt)
+        {
+            return db.Table<Client>().Where(x => x.name.ToLower().Contains(txt.ToLower())).ToList();
+        }
+
 
         public int AddAll(List<Client> clients)
         {

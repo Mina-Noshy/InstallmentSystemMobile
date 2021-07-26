@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.MVVM.Views.Client.EditClientPage"
+             BackgroundColor="{StaticResource primary}"
+             xmlns:controls="clr-namespace:MyApp.Controls;assembly=MyApp"
+             xmlns:resx="clr-namespace:MyApp.Resources.Languages;assembly=MyApp"
+             Title="{x:Static resx:AppResource.editClient}"
+             FlowDirection="{x:Static Device.FlowDirection}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="splash_logo" />
+    </ContentPage.ToolbarItems>
+
+
+    <ScrollView>
+
+        <StackLayout>
+
+            <StackLayout HorizontalOptions="Fill" Padding="30" BackgroundColor="{StaticResource secondary}">
+                <Label Text="{x:Static resx:AppResource.editClient}"
+                       HorizontalTextAlignment="Center"
+                       FontSize="Title"/>
+            </StackLayout>
+
+            <StackLayout Padding="20" Orientation="Vertical">
+
+                <!--indicator-->
+                <ActivityIndicator x:Name="indicator" Color="{StaticResource secondary-text}" IsRunning="False" IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning}"/>
+
+                <Label Text="{x:Static resx:AppResource.pleaseWait}" TextColor="{StaticResource secondary-text}" 
+                   IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning}"
+                   HorizontalTextAlignment="Center"
+                   Margin="30"/>
+
+                <StackLayout>
+
+                    <Label Text="{x:Static resx:AppResource.clientName}"/>
+                    <controls:frame>
+                        <StackLayout Orientation="Horizontal">
+                            <controls:entry x:Name="txtName" Text="{Binding name}"/>
+                        </StackLayout>
+                    </controls:frame>
+
+                    <Label Text="{x:Static resx:AppResource.addressDetails}"/>
+                    <controls:frame>
+                        <StackLayout Orientation="Horizontal">
+                            <controls:entry x:Name="txtAddress" Text="{Binding address}"/>
+                        </StackLayout>
+                    </controls:frame>
+
+                    <Label Text="{x:Static resx:AppResource.mobile}"/>
+                    <controls:frame>
+                        <StackLayout Orientation="Horizontal">
+                            <controls:entry x:Name="txtMobile1" Text="{Binding phone_1}"
+                                    Keyboard="Telephone"/>
+                        </StackLayout>
+                    </controls:frame>
+
+                    <Label Text="{x:Static resx:AppResource.mobile}"/>
+                    <controls:frame>
+                        <StackLayout Orientation="Horizontal">
+                            <controls:entry x:Name="txtMobile2" Text="{Binding phone_2}"
+                                    Keyboard="Telephone"/>
+                        </StackLayout>
+                    </controls:frame>
+
+                    <Label Text="{x:Static resx:AppResource.mobile}"/>
+                    <controls:frame>
+                        <StackLayout Orientation="Horizontal">
+                            <controls:entry x:Name="txtMobile3" Text="{Binding phone_3}"
+                                    Keyboard="Telephone"/>
+                        </StackLayout>
+                    </controls:frame>
+
+                    <Label Text="{x:Static resx:AppResource.email}"/>
+                    <controls:frame>
+                        <StackLayout Orientation="Horizontal">
+                            <controls:entry x:Name="txtEmail" Text="{Binding email}"
+                                            Unfocused="txtEmail_Unfocused"/>
+                        </StackLayout>
+                    </controls:frame>
+
+                    <Label Text="{x:Static resx:AppResource.fax}"/>
+                    <controls:frame>
+                        <StackLayout Orientation="Horizontal">
+                            <controls:entry x:Name="txtFax" Text="{Binding fax}"/>
+                        </StackLayout>
+                    </controls:frame>
+
+
+                </StackLayout>
+
+
+                <controls:seperator/>
+
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+
+                    <controls:button_md
+                         Text="{x:Static resx:AppResource.update}"
+                        x:Name="btnUpdate"
+                        Clicked="btnUpdate_Clicked"/>
+
+                    <controls:button_md
+                         Text="{x:Static resx:AppResource.cancel}"
+                        x:Name="btnCancel"
+                        Clicked="btnCancel_Clicked"/>
+
+                </StackLayout>
+
+            </StackLayout>
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>

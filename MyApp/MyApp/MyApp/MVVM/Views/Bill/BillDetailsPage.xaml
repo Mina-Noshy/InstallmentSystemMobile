@@ -1,12 +1,126 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyApp.MVVM.Views.Bill.BillDetailsPage">
-    <ContentPage.Content>
+             x:Class="MyApp.MVVM.Views.Bill.BillDetailsPage"
+             BackgroundColor="{StaticResource primary}"
+             xmlns:controls="clr-namespace:MyApp.Controls;assembly=MyApp"
+             xmlns:resx="clr-namespace:MyApp.Resources.Languages;assembly=MyApp"
+             Title="{x:Static resx:AppResource.billDetails}"
+             FlowDirection="{x:Static Device.FlowDirection}">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="splash_logo" />
+    </ContentPage.ToolbarItems>
+
+
+    <ScrollView>
+
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <StackLayout HorizontalOptions="Fill" Padding="30" BackgroundColor="{StaticResource secondary}">
+                <Label Text="{x:Static resx:AppResource.billDetails}"
+                       HorizontalOptions="Center"
+                       FontSize="Title"/>
+            </StackLayout>
+
+            <StackLayout Padding="20" Orientation="Vertical">
+
+                <!--indicator-->
+                <ActivityIndicator x:Name="indicator" Color="{StaticResource secondary-text}" IsRunning="True" IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning}"/>
+
+                <Label Text="{x:Static resx:AppResource.pleaseWait}" TextColor="{StaticResource secondary-text}" 
+                   IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning}"
+                   HorizontalTextAlignment="Center"
+                   Margin="30"/>
+
+                <StackLayout IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning, 
+                                   Converter={StaticResource reverseValueConverter}}">
+                    <!--name-->
+                    <Label Text="{x:Static resx:AppResource.clientName}" FontAttributes="Bold" />
+                    <Label Text="{Binding clientName}" />
+                    <controls:seperator/>
+
+                    <!--originalAmount-->
+                    <Label Text="{x:Static resx:AppResource.originalAmount}" FontAttributes="Bold" />
+                    <Label Text="{Binding originalAmount}" />
+                    <controls:seperator/>
+
+                    <!--percentage-->
+                    <Label Text="{x:Static resx:AppResource.percentage}" FontAttributes="Bold" />
+                    <Label Text="{Binding percentage}" />
+                    <controls:seperator/>
+
+                    <!--totalAmount-->
+                    <Label Text="{x:Static resx:AppResource.totalAmount}" FontAttributes="Bold" />
+                    <Label Text="{Binding totalAmount}" />
+                    <controls:seperator/>
+
+                    <!--amountPaid-->
+                    <Label Text="{x:Static resx:AppResource.amountPaid}" FontAttributes="Bold" />
+                    <Label Text="{Binding amountPaid}" />
+                    <controls:seperator/>
+
+                    <!--restAmount-->
+                    <Label Text="{x:Static resx:AppResource.restAmount}" FontAttributes="Bold" />
+                    <Label Text="{Binding restAmount}" />
+                    <controls:seperator/>
+
+                    <!--installmentCount-->
+                    <Label Text="{x:Static resx:AppResource.installmentCount}" FontAttributes="Bold" />
+                    <Label Text="{Binding installmentCount}" />
+
+                    <!--delayFine-->
+                    <Label Text="{x:Static resx:AppResource.delayFine}" FontAttributes="Bold" />
+                    <Label Text="{Binding delayFine}" />
+                    <controls:seperator/>
+
+                    <!--delayFineType-->
+                    <Label Text="{x:Static resx:AppResource.delayFineType}" FontAttributes="Bold" />
+                    <Label Text="{Binding delayFineType}" />
+                    <controls:seperator/>
+
+                    <!--installmentType-->
+                    <Label Text="{x:Static resx:AppResource.installmentType}" FontAttributes="Bold" />
+                    <Label Text="{Binding installmentType}" />
+                    <controls:seperator/>
+                    
+                    <!--billDate-->
+                    <Label Text="{x:Static resx:AppResource.billDate}" FontAttributes="Bold" />
+                    <Label Text="{Binding billDate}" />
+                    <controls:seperator/>
+
+                    <!--description-->
+                    <Label Text="{x:Static resx:AppResource.description}" FontAttributes="Bold" />
+                    <Label Text="{Binding description}" />
+
+
+                </StackLayout>
+
+                <StackLayout IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning, 
+                                   Converter={StaticResource reverseValueConverter}}">
+                    <controls:seperator/>
+
+                    <StackLayout Orientation="Horizontal" 
+                             HorizontalOptions="FillAndExpand">
+
+                        <controls:button_md
+                            x:Name="btnInstallments"
+                            Clicked="btnInstallments_Clicked"
+                            Text="{x:Static resx:AppResource.installments}"/>
+
+                        <controls:button_md
+                            x:Name="btnDelete"
+                            Clicked="btnDelete_Clicked"
+                            Text="{x:Static resx:AppResource.delete}"/>
+
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+
         </StackLayout>
-    </ContentPage.Content>
+
+    </ScrollView>
+
 </ContentPage>

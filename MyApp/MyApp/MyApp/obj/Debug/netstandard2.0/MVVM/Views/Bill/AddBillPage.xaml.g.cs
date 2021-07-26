@@ -17,8 +17,72 @@ namespace MyApp.MVVM.Views.Bill {
     public partial class AddBillPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.ActivityIndicator indicator;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.StackLayout stkClient;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.picker picClient;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.entry txtOriginalAmount;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.entry txtPercentage;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.entry txtAmountPaid;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.entry txtRestAmount;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.entry txtTotalAmount;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.entry txtInstallmentCount;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.entry txtDelayFine;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.picker picDelayFineType;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.picker picInstallmentType;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.entry txtDescription;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.DatePicker picDate;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.button_md btnAdd;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.button_md btnCancel;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AddBillPage));
+            indicator = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ActivityIndicator>(this, "indicator");
+            stkClient = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "stkClient");
+            picClient = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.picker>(this, "picClient");
+            txtOriginalAmount = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.entry>(this, "txtOriginalAmount");
+            txtPercentage = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.entry>(this, "txtPercentage");
+            txtAmountPaid = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.entry>(this, "txtAmountPaid");
+            txtRestAmount = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.entry>(this, "txtRestAmount");
+            txtTotalAmount = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.entry>(this, "txtTotalAmount");
+            txtInstallmentCount = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.entry>(this, "txtInstallmentCount");
+            txtDelayFine = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.entry>(this, "txtDelayFine");
+            picDelayFineType = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.picker>(this, "picDelayFineType");
+            picInstallmentType = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.picker>(this, "picInstallmentType");
+            txtDescription = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.entry>(this, "txtDescription");
+            picDate = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.DatePicker>(this, "picDate");
+            btnAdd = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.button_md>(this, "btnAdd");
+            btnCancel = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.button_md>(this, "btnCancel");
         }
     }
 }

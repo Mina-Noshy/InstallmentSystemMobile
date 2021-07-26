@@ -1,12 +1,106 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyApp.MVVM.Views.Client.ClientDetailsPage">
-    <ContentPage.Content>
+             x:Class="MyApp.MVVM.Views.Client.ClientDetailsPage"
+             BackgroundColor="{StaticResource primary}"
+             xmlns:controls="clr-namespace:MyApp.Controls;assembly=MyApp"
+             xmlns:resx="clr-namespace:MyApp.Resources.Languages;assembly=MyApp"
+             Title="{x:Static resx:AppResource.clientDetails}"
+             FlowDirection="{x:Static Device.FlowDirection}">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="{x:Static resx:AppResource.edit}" Clicked="ToolbarItem_Clicked" />
+    </ContentPage.ToolbarItems>
+
+
+    <ScrollView>
+
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+
+            <StackLayout HorizontalOptions="Fill" Padding="30" BackgroundColor="{StaticResource secondary}">
+                <Label Text="{x:Static resx:AppResource.clientDetails}"
+                       HorizontalOptions="Center"
+                       FontSize="Title"/>
+            </StackLayout>
+
+            <StackLayout Padding="20" Orientation="Vertical">
+
+                <!--indicator-->
+                <ActivityIndicator x:Name="indicator" Color="{StaticResource secondary-text}" IsRunning="True" IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning}"/>
+
+                <Label Text="{x:Static resx:AppResource.pleaseWait}" TextColor="{StaticResource secondary-text}" 
+                   IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning}"
+                   HorizontalTextAlignment="Center"
+                   Margin="30"/>
+
+                <StackLayout IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning, 
+                                   Converter={StaticResource reverseValueConverter}}">
+                    <!--name-->
+                    <Label Text="{x:Static resx:AppResource.clientName}" FontAttributes="Bold" />
+                    <Label Text="{Binding name}" />
+                    <controls:seperator/>
+
+                    <!--address-->
+                    <Label Text="{x:Static resx:AppResource.address}" FontAttributes="Bold" />
+                    <Label Text="{Binding address}" />
+                    <controls:seperator/>
+
+                    <!--phone1-->
+                    <Label Text="{x:Static resx:AppResource.phone}" FontAttributes="Bold" />
+                    <Label Text="{Binding phone_1}" />
+                    <controls:seperator/>
+
+                    <!--phone2-->
+                    <Label Text="{x:Static resx:AppResource.phone}" FontAttributes="Bold" />
+                    <Label Text="{Binding phone_2}" />
+                    <controls:seperator/>
+
+                    <!--phone3-->
+                    <Label Text="{x:Static resx:AppResource.phone}" FontAttributes="Bold" />
+                    <Label Text="{Binding phone_3}" />
+                    <controls:seperator/>
+
+                    <!--email-->
+                    <Label Text="{x:Static resx:AppResource.email}" FontAttributes="Bold" />
+                    <Label Text="{Binding email}" />
+                    <controls:seperator/>
+
+                    <!--fax-->
+                    <Label Text="{x:Static resx:AppResource.fax}" FontAttributes="Bold" />
+                    <Label Text="{Binding fax}" />
+
+                </StackLayout>
+
+                <StackLayout IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning, 
+                                   Converter={StaticResource reverseValueConverter}}">
+                    <controls:seperator/>
+
+                    <StackLayout Orientation="Horizontal" 
+                             HorizontalOptions="FillAndExpand">
+
+                        <controls:button_md
+                             x:Name="btnAddBill"
+                             Clicked="btnAddBill_Clicked"
+                             Text="{x:Static resx:AppResource.addBill}"/>
+
+                        <controls:button_md
+                            x:Name="btnBills"
+                            Clicked="btnBills_Clicked"
+                            Text="{x:Static resx:AppResource.bills}"/>
+
+                        <controls:button_md
+                            x:Name="btnDelete"
+                            Clicked="btnDelete_Clicked"
+                            Text="{x:Static resx:AppResource.delete}"/>
+                        
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+
         </StackLayout>
-    </ContentPage.Content>
+
+    </ScrollView>
+
 </ContentPage>

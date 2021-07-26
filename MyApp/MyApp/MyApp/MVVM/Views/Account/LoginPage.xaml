@@ -103,11 +103,11 @@
                          Text="{x:Static resx:AppResource.login}"
                          Clicked="btnLogin_Clicked"/>
 
-                <Button x:Name="btnStart" 
+                <!--<Button x:Name="btnStart" 
                         BackgroundColor="Transparent"
                         Text="{x:Static resx:AppResource.temporaryEntry}"
                         Clicked="btnStart_Clicked"
-                        TextColor="{StaticResource middle-text}"/>
+                        TextColor="{StaticResource middle-text}"/>-->
 
             </StackLayout>
 

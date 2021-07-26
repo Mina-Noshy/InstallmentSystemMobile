@@ -18,17 +18,20 @@ namespace MyApp.Services.APIServices
 
     public class AccountServices : IAccountServices
     {
-        HttpClient httpClient = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler());
+        HttpClient httpClient;
         public AccountServices()
         {
-            httpClient.BaseAddress = EastariaHelper.BaseUri;
+            httpClient = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler())
+            {
+                BaseAddress = EastariaHelper.BaseUri 
+            };
         }
 
         public async Task<AuthenticationVM> GetToken(LoginVM model)
         {
             var json = JsonConvert.SerializeObject(model);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
-            var response = await httpClient.PostAsync("Account/GetToken/token", content);
+            var response = await httpClient.PostAsync("Account/GetToken", content);
 
             var stringObj = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<AuthenticationVM>(stringObj);
@@ -36,7 +39,7 @@ namespace MyApp.Services.APIServices
 
         public async Task<bool> IsEmailAvailable(string email)
         {
-            var response = await httpClient.PostAsync($"Account/IsEmailAvailable/is-available/{email}", null);
+            var response = await httpClient.PostAsync($"Account/IsEmailAvailable/{email}", null);
 
             if (response.StatusCode == System.Net.HttpStatusCode.OK)
             {
@@ -51,7 +54,7 @@ namespace MyApp.Services.APIServices
 
             var json = JsonConvert.SerializeObject(model);
             var content = new StringContent(json, Encoding.UTF8, "application/json");
-            var response = await httpClient.PostAsync("Account/Register/register", content);
+            var response = await httpClient.PostAsync("Account/Register", content);
 
             if (response.IsSuccessStatusCode)
             {
@@ -61,7 +64,8 @@ namespace MyApp.Services.APIServices
 
             return new ResponseVM
             {
-                status = "error",
+                state = false,
+                title = "error",
                 message = "can not connect to the server"
             };
 

@@ -123,6 +123,12 @@
   <data name="add" xml:space="preserve">
     <value>Add</value>
   </data>
+  <data name="addBill" xml:space="preserve">
+    <value>Add bill</value>
+  </data>
+  <data name="addClient" xml:space="preserve">
+    <value>Add client</value>
+  </data>
   <data name="addedSuccessfully" xml:space="preserve">
     <value>Added successfully</value>
   </data>
@@ -150,6 +156,27 @@
   <data name="addShop" xml:space="preserve">
     <value>Add Shop</value>
   </data>
+  <data name="allInDay" xml:space="preserve">
+    <value>All installments at day</value>
+  </data>
+  <data name="allReceivedToday" xml:space="preserve">
+    <value>All received installments today</value>
+  </data>
+  <data name="allToday" xml:space="preserve">
+    <value>All today installments</value>
+  </data>
+  <data name="allUnReceived" xml:space="preserve">
+    <value>All unreceived installments</value>
+  </data>
+  <data name="allUnReceivedToday" xml:space="preserve">
+    <value>All unreceived installments today</value>
+  </data>
+  <data name="amountPaid" xml:space="preserve">
+    <value>Amount paid</value>
+  </data>
+  <data name="amountValue" xml:space="preserve">
+    <value>Amount value</value>
+  </data>
   <data name="appDescription" xml:space="preserve">
     <value>Sell your products from your place</value>
   </data>
@@ -162,14 +189,47 @@
   <data name="back" xml:space="preserve">
     <value>Back</value>
   </data>
+  <data name="bill" xml:space="preserve">
+    <value>Bill</value>
+  </data>
+  <data name="billDate" xml:space="preserve">
+    <value>Bill date</value>
+  </data>
+  <data name="billDetails" xml:space="preserve">
+    <value>Bill details</value>
+  </data>
+  <data name="billInstallments" xml:space="preserve">
+    <value>Bill installments</value>
+  </data>
+  <data name="bills" xml:space="preserve">
+    <value>Bills</value>
+  </data>
   <data name="cancel" xml:space="preserve">
     <value>Cancel</value>
+  </data>
+  <data name="cancelReceive" xml:space="preserve">
+    <value>Cancel receive</value>
   </data>
   <data name="categoty" xml:space="preserve">
     <value>Category</value>
   </data>
   <data name="city" xml:space="preserve">
     <value>City</value>
+  </data>
+  <data name="client" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="clientBills" xml:space="preserve">
+    <value>Client bills</value>
+  </data>
+  <data name="clientDetails" xml:space="preserve">
+    <value>Client details</value>
+  </data>
+  <data name="clientName" xml:space="preserve">
+    <value>Client name</value>
+  </data>
+  <data name="clients" xml:space="preserve">
+    <value>Clients</value>
   </data>
   <data name="comment" xml:space="preserve">
     <value>Comment</value>
@@ -195,8 +255,26 @@
   <data name="createdSuccessfully" xml:space="preserve">
     <value>Created successfully</value>
   </data>
+  <data name="daily" xml:space="preserve">
+    <value>Daily</value>
+  </data>
+  <data name="daysOfDelay" xml:space="preserve">
+    <value>Days of delay</value>
+  </data>
+  <data name="delayFine" xml:space="preserve">
+    <value>Delay fine</value>
+  </data>
+  <data name="delayFineType" xml:space="preserve">
+    <value>Delay fine type</value>
+  </data>
   <data name="delete" xml:space="preserve">
     <value>Delete</value>
+  </data>
+  <data name="deleteBill" xml:space="preserve">
+    <value>Delete bill</value>
+  </data>
+  <data name="deleteClient" xml:space="preserve">
+    <value>Delete Client</value>
   </data>
   <data name="deletedSuccessfully" xml:space="preserve">
     <value>Deleted successfully</value>
@@ -213,8 +291,17 @@
   <data name="details" xml:space="preserve">
     <value>Details</value>
   </data>
+  <data name="dueDate" xml:space="preserve">
+    <value>Due date</value>
+  </data>
   <data name="edit" xml:space="preserve">
     <value>Edit</value>
+  </data>
+  <data name="editBill" xml:space="preserve">
+    <value>Edit bill</value>
+  </data>
+  <data name="editClient" xml:space="preserve">
+    <value>Edit client</value>
   </data>
   <data name="email" xml:space="preserve">
     <value>Email</value>
@@ -264,6 +351,21 @@
   <data name="home" xml:space="preserve">
     <value>Home</value>
   </data>
+  <data name="installment" xml:space="preserve">
+    <value>Installment</value>
+  </data>
+  <data name="installmentCount" xml:space="preserve">
+    <value>Installment count</value>
+  </data>
+  <data name="installmentDetails" xml:space="preserve">
+    <value>Installment details</value>
+  </data>
+  <data name="installments" xml:space="preserve">
+    <value>Installments</value>
+  </data>
+  <data name="installmentType" xml:space="preserve">
+    <value>Installment type</value>
+  </data>
   <data name="lastName" xml:space="preserve">
     <value>Last Name</value>
   </data>
@@ -297,8 +399,14 @@
   <data name="mobileOrEmailRequired" xml:space="preserve">
     <value>Mobile or email required</value>
   </data>
+  <data name="monthly" xml:space="preserve">
+    <value>Monthly</value>
+  </data>
   <data name="myOffers" xml:space="preserve">
     <value>My Offers</value>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>Name</value>
   </data>
   <data name="nameSoShort" xml:space="preserve">
     <value>Name so short</value>
@@ -321,6 +429,9 @@
   <data name="ok" xml:space="preserve">
     <value>OK</value>
   </data>
+  <data name="originalAmount" xml:space="preserve">
+    <value>Original amount</value>
+  </data>
   <data name="ownerName" xml:space="preserve">
     <value>Owner Name</value>
   </data>
@@ -336,6 +447,9 @@
   <data name="password" xml:space="preserve">
     <value>Password</value>
   </data>
+  <data name="percentage" xml:space="preserve">
+    <value>Percentage</value>
+  </data>
   <data name="personalInfo" xml:space="preserve">
     <value>Personal Information</value>
   </data>
@@ -344,6 +458,9 @@
   </data>
   <data name="phoneSoShort" xml:space="preserve">
     <value>Phone so short</value>
+  </data>
+  <data name="pleaseCallToActivateAccount" xml:space="preserve">
+    <value>Please call 01111257052 to activate your account</value>
   </data>
   <data name="pleaseCompleteRegistration" xml:space="preserve">
     <value>Please complete registration</value>
@@ -411,11 +528,23 @@
   <data name="quantityType" xml:space="preserve">
     <value>Quantity Type</value>
   </data>
+  <data name="receive" xml:space="preserve">
+    <value>Receive</value>
+  </data>
+  <data name="received" xml:space="preserve">
+    <value>Received</value>
+  </data>
+  <data name="receivedDate" xml:space="preserve">
+    <value>Received date</value>
+  </data>
   <data name="register" xml:space="preserve">
     <value>Register</value>
   </data>
   <data name="required" xml:space="preserve">
     <value>Required</value>
+  </data>
+  <data name="restAmount" xml:space="preserve">
+    <value>Rest amount</value>
   </data>
   <data name="save" xml:space="preserve">
     <value>Save</value>
@@ -441,11 +570,26 @@
   <data name="somethingWrong" xml:space="preserve">
     <value>Something Wrong</value>
   </data>
+  <data name="sureToDelete" xml:space="preserve">
+    <value>Are you sure to delete this item?</value>
+  </data>
+  <data name="sureToEdit" xml:space="preserve">
+    <value>Are you sure to edit this item?</value>
+  </data>
+  <data name="sureToUpdate" xml:space="preserve">
+    <value>Are you sure to update this item?</value>
+  </data>
   <data name="temporaryEntry" xml:space="preserve">
     <value>Temporary Entry</value>
   </data>
   <data name="toBuy" xml:space="preserve">
     <value>To Buy</value>
+  </data>
+  <data name="totalAmount" xml:space="preserve">
+    <value>Total amount</value>
+  </data>
+  <data name="totalDelayFine" xml:space="preserve">
+    <value>Total delay fine</value>
   </data>
   <data name="tryAgain" xml:space="preserve">
     <value>Try again</value>
@@ -479,6 +623,9 @@
   </data>
   <data name="writeHereToSearch" xml:space="preserve">
     <value>write here to search</value>
+  </data>
+  <data name="yearly" xml:space="preserve">
+    <value>Yearly</value>
   </data>
   <data name="yes" xml:space="preserve">
     <value>Yes</value>

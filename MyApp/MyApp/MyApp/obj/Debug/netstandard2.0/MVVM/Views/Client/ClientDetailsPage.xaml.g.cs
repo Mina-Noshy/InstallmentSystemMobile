@@ -17,8 +17,24 @@ namespace MyApp.MVVM.Views.Client {
     public partial class ClientDetailsPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.ActivityIndicator indicator;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.button_md btnAddBill;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.button_md btnBills;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.button_md btnDelete;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ClientDetailsPage));
+            indicator = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ActivityIndicator>(this, "indicator");
+            btnAddBill = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.button_md>(this, "btnAddBill");
+            btnBills = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.button_md>(this, "btnBills");
+            btnDelete = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.button_md>(this, "btnDelete");
         }
     }
 }

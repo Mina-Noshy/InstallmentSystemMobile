@@ -16,14 +16,13 @@
 
     <ScrollView>
         <StackLayout Padding="20">
-            <ProgressBar x:Name="progress" IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning}"/>
             <StackLayout>
 
                 <!--get banner component-->
                 <component:bannerView/>
 
                 <!--indicator-->
-                <ActivityIndicator x:Name="indicator" Color="{StaticResource secondary-text}"  IsRunning="True" IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning}"/>
+                <ActivityIndicator x:Name="indicator" Color="{StaticResource secondary-text}"  IsRunning="False" IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning}"/>
 
                 <Label Text="{x:Static resx:AppResource.pleaseWait}" TextColor="{StaticResource secondary-text}" 
                    IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning}"
@@ -45,6 +44,13 @@
                         IsVisible="False"
                         Text="{x:Static resx:AppResource.getStarted}"
                         Clicked="btnGetStarted_Clicked"/>
+
+                <Button x:Name="btnStart" 
+                        BackgroundColor="Transparent"
+                        Text="{x:Static resx:AppResource.temporaryEntry}"
+                        Clicked="btnStart_Clicked"
+                        TextColor="{StaticResource middle-text}"/>
+                
             </StackLayout>
 
         </StackLayout>

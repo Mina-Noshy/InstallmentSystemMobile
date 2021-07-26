@@ -19,6 +19,7 @@ namespace MyApp.MVVM.Models
         public bool isAuthenticated { get; set; }
         public string firstName { get; set; } = null;
         public string lastName { get; set; } = null;
+        public DateTime? stopAt { get; set; } = null;
         public string roles { get; set; } = null;
         public string refreshToken { get; set; } = null;
         public DateTime? refreshTokenExpiration { get; set; } = null;
@@ -27,12 +28,12 @@ namespace MyApp.MVVM.Models
 
         public bool isSettingsUpdated()
         {
-            return settingsUpdatedAt.Value.AddDays(2) > DateTime.UtcNow;
+            return settingsUpdatedAt.Value.AddDays(3) > DateTime.UtcNow;
         }
 
         public bool isTokenExpired()
         {
-            return refreshTokenExpiration.Value < DateTime.UtcNow.AddDays(1);
+            return refreshTokenExpiration.Value < DateTime.UtcNow.AddDays(3);
         }
     }
 }

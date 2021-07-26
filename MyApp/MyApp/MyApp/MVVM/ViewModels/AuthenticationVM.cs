@@ -13,14 +13,11 @@ namespace MyApp.MVVM.ViewModels
         public string email { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
+        public DateTime stopAt { get; set; }
         public List<string> roles { get; set; }
         public string token { get; set; }
         public string refreshToken { get; set; }
         public DateTime refreshTokenExpiration { get; set; }
 
-        public int cityId { get; set; }
-        public int countryId { get; set; }
-        public int userTypeId { get; set; }
-        public string address { get; set; }
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "jI4ZrIzGda+ueHfoVQqyLZrB3BKVABZB/SZrxZY+U+Q6gmEBpBM+xyzYNhnsytN3hVDl5i7tE2VW1XuaXrhSVQ==",
+  "dgSpecHash": "z4x6T/pBe6TVP8Vmo9aH4KddumTh5KY6mr6gGi/DwHy9r8I9sGCC1+6ZzVSJDMRZ7ZhEvf2xTOtPhVj6S3oj7w==",
   "success": true,
   "projectFilePath": "D:\\projects\\mobile\\InstallmentSystemMobile\\MyApp\\MyApp\\MyApp\\MyApp.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\mina-\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.3\\sqlitepclraw.lib.e_sqlite3.2.0.3.nupkg.sha512",
     "C:\\Users\\mina-\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.3\\sqlitepclraw.provider.e_sqlite3.2.0.3.nupkg.sha512",
     "C:\\Users\\mina-\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\mina-\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512",
     "C:\\Users\\mina-\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\mina-\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\mina-\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",

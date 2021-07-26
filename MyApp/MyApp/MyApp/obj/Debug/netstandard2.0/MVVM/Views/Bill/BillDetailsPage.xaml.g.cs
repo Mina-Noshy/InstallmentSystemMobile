@@ -17,8 +17,20 @@ namespace MyApp.MVVM.Views.Bill {
     public partial class BillDetailsPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.ActivityIndicator indicator;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.button_md btnInstallments;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::MyApp.Controls.button_md btnDelete;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(BillDetailsPage));
+            indicator = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ActivityIndicator>(this, "indicator");
+            btnInstallments = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.button_md>(this, "btnInstallments");
+            btnDelete = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.button_md>(this, "btnDelete");
         }
     }
 }

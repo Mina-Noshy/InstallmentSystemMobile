@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.MVVM.Views.Bill.BillInstallmentsPage"
+             BackgroundColor="{StaticResource primary}"
+             xmlns:control="clr-namespace:MyApp.Controls;assembly=MyApp"
+             xmlns:resx="clr-namespace:MyApp.Resources.Languages;assembly=MyApp"
+             Title="{x:Static resx:AppResource.billInstallments}"
+             FlowDirection="{x:Static Device.FlowDirection}">
+
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="splash_logo"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <StackLayout>
+
+            <StackLayout HorizontalOptions="Fill" Padding="30" BackgroundColor="{StaticResource secondary}">
+                <Label Text="{x:Static resx:AppResource.billInstallments}"
+                       HorizontalOptions="Center"
+                       FontSize="Title"/>
+            </StackLayout>
+
+            <ListView x:Name="lstInstallmentss" 
+                      HasUnevenRows="True" 
+                      SelectionMode="Single"
+                      ItemSelected="lstInstallmentss_ItemSelected">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <Frame BackgroundColor="{StaticResource secondary}"
+                                   BorderColor="{Binding receivedDate, Converter={StaticResource receivingStateConverter}}"
+                                   CornerRadius="5"
+                                   Margin="2"
+                                   Padding="5"
+                                   HorizontalOptions="FillAndExpand">
+
+                                <StackLayout Orientation="Horizontal">
+
+                                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                        <Label FontAttributes="Bold"
+                                               TextColor="{Binding dueDate, Converter={StaticResource requiredStateConverter}}">
+                                            <Label.Text>
+                                                <MultiBinding StringFormat="{}{0} ({1})">
+                                                    <Binding Path="client" />
+                                                    <Binding Path="amountValue" />
+                                                </MultiBinding>
+                                            </Label.Text>
+                                        </Label>
+
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label TextColor="{StaticResource secondary-text}"
+                                               Text="{Binding dueDate, StringFormat='{0:dd MMMM, yyyy}'}"/>
+
+                                            <Label TextColor="{StaticResource secondary-text}"
+                                               Text="{Binding receivedDate, StringFormat='{0:dd MMMM, yyyy}'}"/>
+                                        </StackLayout>
+
+
+                                    </StackLayout>
+
+                                </StackLayout>
+
+                            </Frame>
+
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>

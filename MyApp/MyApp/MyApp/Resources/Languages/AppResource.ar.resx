@@ -123,6 +123,12 @@
   <data name="add" xml:space="preserve">
     <value>اضافه</value>
   </data>
+  <data name="addBill" xml:space="preserve">
+    <value>اضافه فاتوره</value>
+  </data>
+  <data name="addClient" xml:space="preserve">
+    <value>اضافه عميل</value>
+  </data>
   <data name="addedSuccessfully" xml:space="preserve">
     <value>تم الاضافه بنجاح</value>
   </data>
@@ -150,6 +156,27 @@
   <data name="addShop" xml:space="preserve">
     <value>اضافه محل</value>
   </data>
+  <data name="allInDay" xml:space="preserve">
+    <value>كل الاقساط فى يوم</value>
+  </data>
+  <data name="allReceivedToday" xml:space="preserve">
+    <value>كل الاقساط المستلمه اليوم</value>
+  </data>
+  <data name="allToday" xml:space="preserve">
+    <value>كل اقساط اليوم</value>
+  </data>
+  <data name="allUnReceived" xml:space="preserve">
+    <value>كل الاقساط غير المستلمه</value>
+  </data>
+  <data name="allUnReceivedToday" xml:space="preserve">
+    <value>كل الاقساط غير المستلمه اليوم</value>
+  </data>
+  <data name="amountPaid" xml:space="preserve">
+    <value>المبلغ المدفوع</value>
+  </data>
+  <data name="amountValue" xml:space="preserve">
+    <value>قيمه المبلغ</value>
+  </data>
   <data name="appDescription" xml:space="preserve">
     <value>بيع انتاجك وانت ف مكانك</value>
   </data>
@@ -162,14 +189,47 @@
   <data name="back" xml:space="preserve">
     <value>رجوع</value>
   </data>
+  <data name="bill" xml:space="preserve">
+    <value>الفاتوره</value>
+  </data>
+  <data name="billDate" xml:space="preserve">
+    <value>تاريخ الفاتوره</value>
+  </data>
+  <data name="billDetails" xml:space="preserve">
+    <value>بيانات الفاتوره</value>
+  </data>
+  <data name="billInstallments" xml:space="preserve">
+    <value>اقساط الفاتوره</value>
+  </data>
+  <data name="bills" xml:space="preserve">
+    <value>الفواتير</value>
+  </data>
   <data name="cancel" xml:space="preserve">
     <value>الغاء</value>
+  </data>
+  <data name="cancelReceive" xml:space="preserve">
+    <value>الغاء الاستلام</value>
   </data>
   <data name="categoty" xml:space="preserve">
     <value>الصنف</value>
   </data>
   <data name="city" xml:space="preserve">
     <value>المدينه</value>
+  </data>
+  <data name="client" xml:space="preserve">
+    <value>العميل</value>
+  </data>
+  <data name="clientBills" xml:space="preserve">
+    <value>فواتير العميل</value>
+  </data>
+  <data name="clientDetails" xml:space="preserve">
+    <value>بيانات العميل</value>
+  </data>
+  <data name="clientName" xml:space="preserve">
+    <value>اسم العميل</value>
+  </data>
+  <data name="clients" xml:space="preserve">
+    <value>العملاء</value>
   </data>
   <data name="comment" xml:space="preserve">
     <value>تعليق</value>
@@ -195,8 +255,26 @@
   <data name="createdSuccessfully" xml:space="preserve">
     <value>تم الانشاء بنجاح</value>
   </data>
+  <data name="daily" xml:space="preserve">
+    <value>يومى</value>
+  </data>
+  <data name="daysOfDelay" xml:space="preserve">
+    <value>ايام التأخير</value>
+  </data>
+  <data name="delayFine" xml:space="preserve">
+    <value>غرامه التأخير</value>
+  </data>
+  <data name="delayFineType" xml:space="preserve">
+    <value>نوع غرامه التأخير</value>
+  </data>
   <data name="delete" xml:space="preserve">
     <value>حذف</value>
+  </data>
+  <data name="deleteBill" xml:space="preserve">
+    <value>حذف الفاتوره</value>
+  </data>
+  <data name="deleteClient" xml:space="preserve">
+    <value>حذف العميل</value>
   </data>
   <data name="deletedSuccessfully" xml:space="preserve">
     <value>تم الحذف بنجاح</value>
@@ -213,8 +291,17 @@
   <data name="details" xml:space="preserve">
     <value>التفاصيل</value>
   </data>
+  <data name="dueDate" xml:space="preserve">
+    <value>تاريخ الاستحقاق</value>
+  </data>
   <data name="edit" xml:space="preserve">
     <value>تعديل</value>
+  </data>
+  <data name="editBill" xml:space="preserve">
+    <value>تعديل بيانات الفاتوره</value>
+  </data>
+  <data name="editClient" xml:space="preserve">
+    <value>تعديل بيانات العميل</value>
   </data>
   <data name="email" xml:space="preserve">
     <value>البريد الالكترونى</value>
@@ -264,6 +351,21 @@
   <data name="home" xml:space="preserve">
     <value>الرئيسه</value>
   </data>
+  <data name="installment" xml:space="preserve">
+    <value>القسط</value>
+  </data>
+  <data name="installmentCount" xml:space="preserve">
+    <value>عدد الاقساط</value>
+  </data>
+  <data name="installmentDetails" xml:space="preserve">
+    <value>بيانات القسط</value>
+  </data>
+  <data name="installments" xml:space="preserve">
+    <value>الاقساط</value>
+  </data>
+  <data name="installmentType" xml:space="preserve">
+    <value>نوع القسط</value>
+  </data>
   <data name="lastName" xml:space="preserve">
     <value>الاسم الاخير</value>
   </data>
@@ -297,8 +399,14 @@
   <data name="mobileOrEmailRequired" xml:space="preserve">
     <value>يجب ادخال رقم الهاتف او البريد الالكترونى</value>
   </data>
+  <data name="monthly" xml:space="preserve">
+    <value>شهرى</value>
+  </data>
   <data name="myOffers" xml:space="preserve">
     <value>عروضي</value>
+  </data>
+  <data name="name" xml:space="preserve">
+    <value>الاسم</value>
   </data>
   <data name="nameSoShort" xml:space="preserve">
     <value>الاسم قصير جدا</value>
@@ -321,6 +429,9 @@
   <data name="ok" xml:space="preserve">
     <value>موافق</value>
   </data>
+  <data name="originalAmount" xml:space="preserve">
+    <value>المبلغ الاصلى</value>
+  </data>
   <data name="ownerName" xml:space="preserve">
     <value>اسم المالك</value>
   </data>
@@ -336,6 +447,9 @@
   <data name="password" xml:space="preserve">
     <value>كلمه المرور</value>
   </data>
+  <data name="percentage" xml:space="preserve">
+    <value>النسبه</value>
+  </data>
   <data name="personalInfo" xml:space="preserve">
     <value>البيانات الشخصيه</value>
   </data>
@@ -344,6 +458,9 @@
   </data>
   <data name="phoneSoShort" xml:space="preserve">
     <value>رقم الهاتف قصير جدا</value>
+  </data>
+  <data name="pleaseCallToActivateAccount" xml:space="preserve">
+    <value>الرجاء الاتصال بالرقم  01111257052 حتي يتم تفعيل الحساب</value>
   </data>
   <data name="pleaseCompleteRegistration" xml:space="preserve">
     <value>الرجاء اكمال التسجيل</value>
@@ -411,11 +528,23 @@
   <data name="quantityType" xml:space="preserve">
     <value>نوع الكميه</value>
   </data>
+  <data name="receive" xml:space="preserve">
+    <value>استلام</value>
+  </data>
+  <data name="received" xml:space="preserve">
+    <value>تم الاستلام</value>
+  </data>
+  <data name="receivedDate" xml:space="preserve">
+    <value>تاريخ الاستلام</value>
+  </data>
   <data name="register" xml:space="preserve">
     <value>انشاء جديد</value>
   </data>
   <data name="required" xml:space="preserve">
     <value>يجب ادخاله</value>
+  </data>
+  <data name="restAmount" xml:space="preserve">
+    <value>المبلغ المتبقى</value>
   </data>
   <data name="save" xml:space="preserve">
     <value>حفظ</value>
@@ -441,11 +570,26 @@
   <data name="somethingWrong" xml:space="preserve">
     <value>حدث خطا ما</value>
   </data>
+  <data name="sureToDelete" xml:space="preserve">
+    <value>هل انت متاكد من حذف هذا العنصر ؟</value>
+  </data>
+  <data name="sureToEdit" xml:space="preserve">
+    <value>هل انت متاكد من تعديل هذا العنصر ؟</value>
+  </data>
+  <data name="sureToUpdate" xml:space="preserve">
+    <value>هل انت متاكد من تحديث هذا العنصر ؟</value>
+  </data>
   <data name="temporaryEntry" xml:space="preserve">
     <value>دخول مؤقت</value>
   </data>
   <data name="toBuy" xml:space="preserve">
     <value>للشراء</value>
+  </data>
+  <data name="totalAmount" xml:space="preserve">
+    <value>اجمالى مبلغ التقسيط</value>
+  </data>
+  <data name="totalDelayFine" xml:space="preserve">
+    <value>اجمالى غرامه التأخير</value>
   </data>
   <data name="tryAgain" xml:space="preserve">
     <value>حاول مره اخرى</value>
@@ -479,6 +623,9 @@
   </data>
   <data name="writeHereToSearch" xml:space="preserve">
     <value>اكتب هنا للبحث</value>
+  </data>
+  <data name="yearly" xml:space="preserve">
+    <value>سنوى</value>
   </data>
   <data name="yes" xml:space="preserve">
     <value>نعم</value>

@@ -8,6 +8,9 @@
     converters
     =======================================-->
     <converter:ReverseValueConverter x:Key="reverseValueConverter"/>
+    <converter:ReceivingStateConverter x:Key="receivingStateConverter"/>
+    <converter:RequiredStateConverter x:Key="requiredStateConverter"/>
+    <converter:NullToReceivedConverter x:Key="nullToReceivedConverter"/>
     <!-- end converters -->
 
     <!-- 

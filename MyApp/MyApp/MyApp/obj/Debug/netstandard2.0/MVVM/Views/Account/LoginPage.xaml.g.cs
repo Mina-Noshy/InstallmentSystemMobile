@@ -41,9 +41,6 @@ namespace MyApp.MVVM.Views.Account {
         private global::MyApp.Controls.button_lg btnLogin;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button btnStart;
-        
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(LoginPage));
             indicator = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ActivityIndicator>(this, "indicator");
@@ -54,7 +51,6 @@ namespace MyApp.MVVM.Views.Account {
             txtPassword = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.entry>(this, "txtPassword");
             txtConfirmPassword = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.entry>(this, "txtConfirmPassword");
             btnLogin = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.button_lg>(this, "btnLogin");
-            btnStart = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "btnStart");
         }
     }
 }

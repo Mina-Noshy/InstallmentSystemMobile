@@ -17,17 +17,11 @@ namespace MyApp
 {
     public partial class MainPage : ContentPage
     {
-        //CountryServices apiCountry;
-        //SQLiteCountryServices sqlCountry;
-
         SQLiteSettingServices sqlSetting;
 
         public MainPage()
         {
             InitializeComponent();
-
-            //apiCountry = new CountryServices();
-            //sqlCountry = new SQLiteCountryServices();
 
             sqlSetting = new SQLiteSettingServices();
         }
@@ -36,7 +30,7 @@ namespace MyApp
         {
             base.OnAppearing();
 
-            Task ts2 = ReConnect();
+            Task ts2 = fade(700);
         }
 
         async Task fade(uint length)
@@ -62,61 +56,27 @@ namespace MyApp
             await fade(length);
         }
 
-        private async Task FillLocalDB()
-        {
-
-            if (sqlSetting.IsSettingsUpdated())
-            {
-                return;
-            }
-            else if (EastariaHelper.IsOnline())
-            {
-
-                //progress.Progress = 0.090;
-                //await Task.Delay(100);
-                //var _lstCountry = await apiCountry.GetAll();
-                //sqlCountry.UpdateAll(_lstCountry);
-
-
-                progress.Progress = 0.900;
-                await Task.Delay(100);
-                sqlSetting.EditSettingsLastUpdet();
-
-                progress.Progress = 0.990;
-
-                await Task.Delay(100);
-                progress.Progress = 1;
-            }
-
-        }
-
-        private async Task ReConnect()
-        {
-            while (true)
-            {
-                if (!sqlSetting.IsSettingsUpdated())
-                {
-                    if (!EastariaHelper.IsOnline())
-                        await DisplayAlert("", resx.AppResource.pleaseOpenNetConn, resx.AppResource.ok);
-
-                    await FillLocalDB();
-                }
-                else
-                {
-                    indicator.IsRunning = false;
-                    await fade(800);
-                    break;
-                }
-                await Task.Delay(2000);
-            }
-            return;
-        }
-
-
         async void btnGetStarted_Clicked(object sender, EventArgs e)
         {
             if (sqlSetting.GetSetting().isAuthenticated)
             {
+                // when be false then this user not approved by admin yet.
+                if (string.IsNullOrEmpty(sqlSetting.GetSetting().roles))
+                {
+                    indicator.IsRunning = true;
+
+                    await EastariaHelper.GetToken();
+
+                    indicator.IsRunning = false;
+
+                    if (string.IsNullOrEmpty(sqlSetting.GetSetting().roles))
+                    {
+                        await DisplayAlert("", resx.AppResource.pleaseCallToActivateAccount, resx.AppResource.ok);
+
+                        return;
+                    }
+                }
+
                 if (sqlSetting.IsTokenExpired())
                 {
                     if (EastariaHelper.IsOnline())
@@ -134,12 +94,17 @@ namespace MyApp
                         return;
                     }
                 }
+                else
+                    Application.Current.MainPage = new NavigationPage(new MainTabbedPage());
             }
-
-            if (EastariaHelper.settingServices.GetSetting().isAuthenticated)
-                Application.Current.MainPage = new NavigationPage(new MainTabbedPage());
             else
                 Application.Current.MainPage = new NavigationPage(new LoginPage());
+
+        }
+
+        private void btnStart_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.MainPage = new NavigationPage(new LoginPage());
         }
     }
 }

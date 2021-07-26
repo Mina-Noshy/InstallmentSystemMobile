@@ -7,8 +7,7 @@
              BarTextColor="{StaticResource bar-text}"
              BarBackgroundColor="{StaticResource bar-bg}"
              FlowDirection="{x:Static Device.FlowDirection}">
-  <!--Pages can be added as references or inline-->
-  <ContentPage Title="Tab 1" />
-  <ContentPage Title="Tab 2" />
-  <ContentPage Title="Tab 3" />
+    
+
+    
 </TabbedPage>

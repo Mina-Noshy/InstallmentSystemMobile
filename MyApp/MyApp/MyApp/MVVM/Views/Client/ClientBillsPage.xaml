@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.MVVM.Views.Client.ClientBillsPage"
+             BackgroundColor="{StaticResource primary}"
+             xmlns:control="clr-namespace:MyApp.Controls;assembly=MyApp"
+             xmlns:resx="clr-namespace:MyApp.Resources.Languages;assembly=MyApp"
+             Title="{x:Static resx:AppResource.clientBills}"
+             FlowDirection="{x:Static Device.FlowDirection}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="splash_logo"/>
+    </ContentPage.ToolbarItems>
+
+    <ScrollView>
+        <StackLayout>
+
+            <StackLayout HorizontalOptions="Fill" Padding="30" BackgroundColor="{StaticResource secondary}">
+                <Label Text="{x:Static resx:AppResource.clientBills}"
+                       HorizontalOptions="Center"
+                       FontSize="Title"/>
+            </StackLayout>
+
+            <ListView x:Name="lstBills" 
+                      HasUnevenRows="True" 
+                      SelectionMode="Single"
+                      ItemSelected="lstBills_ItemSelected">
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <Frame BackgroundColor="{StaticResource secondary}"
+                                   BorderColor="{StaticResource border-light}"
+                                   CornerRadius="5"
+                                   Margin="2"
+                                   Padding="5"
+                                   HorizontalOptions="FillAndExpand">
+
+                                <StackLayout Orientation="Horizontal">
+
+                                    <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                                        <Label Text="{Binding client}" 
+                                               FontAttributes="Bold"
+                                               TextColor="{StaticResource primary-text}"/>
+
+                                        <Label>
+                                            <Label.Text>
+                                                <MultiBinding StringFormat="{}{0} ~ {1} ~ {2} ~ {3}% ~ {4}">
+                                                    <Binding Path="originalAmount" />
+                                                    <Binding Path="amountPaid" />
+                                                    <Binding Path="restAmount" />
+                                                    <Binding Path="percentage" />
+                                                    <Binding Path="totalAmount" />
+                                                </MultiBinding>
+                                            </Label.Text>
+                                        </Label>
+
+                                    </StackLayout>
+
+                                </StackLayout>
+
+                            </Frame>
+
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ScrollView>
+    
+</ContentPage>

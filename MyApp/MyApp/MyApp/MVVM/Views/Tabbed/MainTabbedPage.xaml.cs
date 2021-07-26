@@ -1,4 +1,7 @@
-﻿using System;
+﻿using MyApp.MVVM.Views.Bill;
+using MyApp.MVVM.Views.Client;
+using MyApp.MVVM.Views.Installment;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,10 +19,9 @@ namespace MyApp.MVVM.Views.Tabbed
         {
             InitializeComponent();
 
-            //this.Children.Add(new HomePage { IconImageSource = "ic_fas_home" });
-            //this.Children.Add(new PricesPage { IconImageSource = "ic_fas_dollar_sign" });
-            //this.Children.Add(new AddOfferPage { IconImageSource = "ic_fas_plus_circle" });
-            //this.Children.Add(new MarketsPage { IconImageSource = "ic_fas_home" });
+            this.Children.Add(new ClientsPage { IconImageSource = "ic_fas_dollar_sign" });
+            this.Children.Add(new BillsPage { IconImageSource = "ic_fas_plus_circle" });
+            this.Children.Add(new InstallmentsPage { IconImageSource = "ic_fas_home" });
             //if (isAuthorized)
             //    this.Children.Add(new AccountPage { IconImageSource = "ic_fas_profile" });
 
