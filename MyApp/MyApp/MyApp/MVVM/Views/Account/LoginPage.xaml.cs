@@ -45,10 +45,6 @@ namespace MyApp.MVVM.Views.Account
 
         }
 
-        //private void btnStart_Clicked(object sender, EventArgs e)
-        //{
-        //    Application.Current.MainPage = new NavigationPage(new MainTabbedPage());
-        //}
 
         async void btnLogin_Clicked(object sender, EventArgs e)
         {
@@ -227,5 +223,18 @@ namespace MyApp.MVVM.Views.Account
 
         }
 
+        private void btnPass_Clicked(object sender, EventArgs e)
+        {
+            txtPassword.IsPassword = !txtPassword.IsPassword;
+            btnPass.Source = txtPassword.IsPassword ? ImageSource.FromFile("ic_fas_eye") : ImageSource.FromFile("ic_fas_eye_slash");
+
+        }
+
+        private void btnConfirm_Clicked(object sender, EventArgs e)
+        {
+            txtConfirmPassword.IsPassword = !txtConfirmPassword.IsPassword;
+            btnConfirm.Source = txtConfirmPassword.IsPassword ? ImageSource.FromFile("ic_fas_eye") : ImageSource.FromFile("ic_fas_eye_slash");
+
+        }
     }
 }

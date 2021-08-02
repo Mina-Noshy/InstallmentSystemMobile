@@ -349,6 +349,15 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Change password.
+        /// </summary>
+        internal static string changePassword {
+            get {
+                return ResourceManager.GetString("changePassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to City.
         /// </summary>
         internal static string city {
@@ -471,6 +480,15 @@ namespace MyApp.Resources.Languages {
         internal static string createdSuccessfully {
             get {
                 return ResourceManager.GetString("createdSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Current password.
+        /// </summary>
+        internal static string currentPassword {
+            get {
+                return ResourceManager.GetString("currentPassword", resourceCulture);
             }
         }
         
@@ -718,6 +736,15 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Help.
+        /// </summary>
+        internal static string help {
+            get {
+                return ResourceManager.GetString("help", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hi.
         /// </summary>
         internal static string hi {
@@ -943,11 +970,29 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to New password.
+        /// </summary>
+        internal static string newPassword {
+            get {
+                return ResourceManager.GetString("newPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No.
         /// </summary>
         internal static string no {
             get {
                 return ResourceManager.GetString("no", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Not accepted.
+        /// </summary>
+        internal static string notAccepted {
+            get {
+                return ResourceManager.GetString("notAccepted", resourceCulture);
             }
         }
         
@@ -1416,6 +1461,15 @@ namespace MyApp.Resources.Languages {
         internal static string somethingWrong {
             get {
                 return ResourceManager.GetString("somethingWrong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to So short.
+        /// </summary>
+        internal static string soShort {
+            get {
+                return ResourceManager.GetString("soShort", resourceCulture);
             }
         }
         

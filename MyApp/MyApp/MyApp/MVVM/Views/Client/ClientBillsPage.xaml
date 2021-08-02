@@ -41,6 +41,7 @@
 
                                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                                         <Label Text="{Binding client}" 
+                                               HorizontalOptions="Start"
                                                FontAttributes="Bold"
                                                TextColor="{StaticResource primary-text}"/>
 

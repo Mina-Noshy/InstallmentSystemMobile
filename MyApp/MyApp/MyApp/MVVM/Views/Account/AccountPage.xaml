@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MyApp.MVVM.Views.Account.AccountPage"
+             BackgroundColor="{StaticResource primary}"
+             xmlns:controls="clr-namespace:MyApp.Controls;assembly=MyApp"
+             xmlns:resx="clr-namespace:MyApp.Resources.Languages;assembly=MyApp"
+             Title="{x:Static resx:AppResource.account}"
+             FlowDirection="{x:Static Device.FlowDirection}">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="toolBarItem" 
+                     Clicked="toolBarItem_Clicked" Text="{x:Static resx:AppResource.edit}" />
+    </ContentPage.ToolbarItems>
+
+
+    <ScrollView>
+
+        <StackLayout>
+
+            <StackLayout HorizontalOptions="Fill" Padding="30" BackgroundColor="{StaticResource secondary}">
+                <Label Text="{x:Static resx:AppResource.personalInfo}"
+                       HorizontalOptions="Center"
+                       FontSize="Title"/>
+                <StackLayout>
+                    <Label Text="hint: acc expire at 22 june 2021 after 22 days."/>
+                </StackLayout>
+            </StackLayout>
+
+            <StackLayout Padding="20" Orientation="Vertical">
+
+                <!--indicator-->
+                <ActivityIndicator x:Name="indicator" Color="{StaticResource secondary-text}" IsRunning="False" IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning}"/>
+
+                <Label Text="{x:Static resx:AppResource.pleaseWait}" TextColor="{StaticResource secondary-text}" 
+                   IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning}"
+                   HorizontalTextAlignment="Center"
+                   Margin="30"/>
+
+                <StackLayout IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning, 
+                                   Converter={StaticResource reverseValueConverter}}">
+
+                    <!--username-->
+                    <Label Text="{x:Static resx:AppResource.username}"/>
+                    <controls:frame>
+                        <StackLayout Orientation="Horizontal">
+                            <controls:entry x:Name="txtUserName" IsEnabled="{Binding Source={x:Reference toolBarItem}, Path=IsEnabled, 
+                                   Converter={StaticResource reverseValueConverter}}"/>
+                        </StackLayout>
+                    </controls:frame>
+
+                    <!--email-->
+                    <Label Text="{x:Static resx:AppResource.email}"/>
+                    <controls:frame>
+                        <StackLayout Orientation="Horizontal">
+                            <controls:entry x:Name="txtEmail" IsEnabled="{Binding Source={x:Reference toolBarItem}, Path=IsEnabled, 
+                                   Converter={StaticResource reverseValueConverter}}"/>
+                        </StackLayout>
+                    </controls:frame>
+
+                    <!--phone-->
+                    <Label Text="{x:Static resx:AppResource.phone}"/>
+                    <controls:frame>
+                        <StackLayout Orientation="Horizontal">
+                            <controls:entry x:Name="txtPhone"
+                                            Keyboard="Telephone"
+                                            IsEnabled="{Binding Source={x:Reference toolBarItem}, Path=IsEnabled, 
+                                   Converter={StaticResource reverseValueConverter}}"/>
+                        </StackLayout>
+                    </controls:frame>
+
+                    <!--firstName-->
+                    <Label Text="{x:Static resx:AppResource.firstName}"/>
+                    <controls:frame>
+                        <StackLayout Orientation="Horizontal">
+                            <controls:entry x:Name="txtFirstName" IsEnabled="{Binding Source={x:Reference toolBarItem}, Path=IsEnabled, 
+                                   Converter={StaticResource reverseValueConverter}}"/>
+                        </StackLayout>
+                    </controls:frame>
+
+                    <!--lstName-->
+                    <Label Text="{x:Static resx:AppResource.lastName}"/>
+                    <controls:frame>
+                        <StackLayout Orientation="Horizontal">
+                            <controls:entry x:Name="txtLastName" IsEnabled="{Binding Source={x:Reference toolBarItem}, Path=IsEnabled, 
+                                   Converter={StaticResource reverseValueConverter}}"/>
+                        </StackLayout>
+                    </controls:frame>
+
+
+                </StackLayout>
+
+                <StackLayout IsVisible="{Binding Source={x:Reference indicator}, Path=IsRunning, 
+                                   Converter={StaticResource reverseValueConverter}}">
+                    <controls:seperator/>
+
+                    <StackLayout Orientation="Vertical" 
+                             HorizontalOptions="FillAndExpand">
+
+                        <StackLayout Orientation="Horizontal">
+                            <controls:button_md
+                            x:Name="btnSave"
+                            Clicked="btnSave_Clicked"
+                            Text="{x:Static resx:AppResource.save}"
+                            IsEnabled="{Binding Source={x:Reference toolBarItem}, Path=IsEnabled, 
+                                   Converter={StaticResource reverseValueConverter}}"/>
+
+                            <controls:button_md
+                            x:Name="btnCancel"
+                            Clicked="btnCancel_Clicked"
+                            Text="{x:Static resx:AppResource.cancel}"
+                            IsEnabled="{Binding Source={x:Reference toolBarItem}, Path=IsEnabled, 
+                                   Converter={StaticResource reverseValueConverter}}"/>
+
+                        </StackLayout>
+                        
+                        <Button x:Name="btnChangePass" 
+                        BackgroundColor="Transparent"
+                        Text="{x:Static resx:AppResource.changePassword}"
+                        Clicked="btnChangePass_Clicked"
+                        TextColor="{StaticResource middle-text}"/>
+                        
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+
+        </StackLayout>
+
+    </ScrollView>
+
+</ContentPage>

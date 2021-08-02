@@ -112,6 +112,13 @@ namespace MyApp.MVVM.Views.Bill
                 return;
             }
 
+            // =========> description validation
+            if (txtDescription.Text.Length < 10)
+            {
+                await DisplayAlert("", resx.AppResource.pleaseWriteGoodDescription, resx.AppResource.ok);
+                return;
+            }
+
             indicator.IsRunning = true;
 
             bool result = await apiBill.AddBill(new StandardBill

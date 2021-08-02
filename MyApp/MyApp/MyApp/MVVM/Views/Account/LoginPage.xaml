@@ -73,6 +73,7 @@
                        TextColor="{StaticResource primary-text}"/>
                 <controls:frame>
                     <StackLayout Orientation="Horizontal">
+                        <ImageButton x:Name="btnPass" Source="ic_fas_eye" Clicked="btnPass_Clicked" BackgroundColor="Transparent"/>
                         <controls:entry
                             IsPassword="True"
                               x:Name="txtPassword"/>
@@ -84,6 +85,7 @@
                        TextColor="{StaticResource primary-text}"/>
                     <controls:frame>
                         <StackLayout Orientation="Horizontal">
+                            <ImageButton x:Name="btnConfirm" Source="ic_fas_eye" Clicked="btnConfirm_Clicked" BackgroundColor="Transparent"/>
                             <controls:entry
                                 IsPassword="True"
                               x:Name="txtConfirmPassword"/>

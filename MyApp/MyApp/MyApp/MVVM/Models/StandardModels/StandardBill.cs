@@ -29,11 +29,4 @@ namespace MyApp.MVVM.Models.StandardModels
         يومى
     }
 
-    public enum InstallmentTypesEN
-    {
-        Yearly,
-        Monthly,
-        Daily
-    }
-
 }

@@ -32,7 +32,13 @@ namespace MyApp.MVVM.Views.Account {
         private global::MyApp.Controls.entry txtFullName;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.ImageButton btnPass;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::MyApp.Controls.entry txtPassword;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.ImageButton btnConfirm;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::MyApp.Controls.entry txtConfirmPassword;
@@ -48,7 +54,9 @@ namespace MyApp.MVVM.Views.Account {
             swhLogin = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Switch>(this, "swhLogin");
             txtUserName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.entry>(this, "txtUserName");
             txtFullName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.entry>(this, "txtFullName");
+            btnPass = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ImageButton>(this, "btnPass");
             txtPassword = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.entry>(this, "txtPassword");
+            btnConfirm = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ImageButton>(this, "btnConfirm");
             txtConfirmPassword = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.entry>(this, "txtConfirmPassword");
             btnLogin = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.button_lg>(this, "btnLogin");
         }

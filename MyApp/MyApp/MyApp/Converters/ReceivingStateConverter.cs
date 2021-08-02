@@ -11,9 +11,9 @@ namespace MyApp.Converters
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value is null)
-                return "#6a6a6a";
+                return "#F5F5F5";
             else
-                return "#0075a3";
+                return "#28a745";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)

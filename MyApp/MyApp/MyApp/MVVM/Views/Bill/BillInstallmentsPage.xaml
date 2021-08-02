@@ -30,9 +30,8 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-
                             <Frame BackgroundColor="{StaticResource secondary}"
-                                   BorderColor="{Binding receivedDate, Converter={StaticResource receivingStateConverter}}"
+                                   BorderColor="{StaticResource border-light}"
                                    CornerRadius="5"
                                    Margin="2"
                                    Padding="5"
@@ -42,7 +41,8 @@
 
                                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                                         <Label FontAttributes="Bold"
-                                               TextColor="{Binding dueDate, Converter={StaticResource requiredStateConverter}}">
+                                               HorizontalOptions="Start"
+                                               TextColor="{StaticResource primary-text}">
                                             <Label.Text>
                                                 <MultiBinding StringFormat="{}{0} ({1})">
                                                     <Binding Path="client" />
@@ -57,6 +57,25 @@
 
                                             <Label TextColor="{StaticResource secondary-text}"
                                                Text="{Binding receivedDate, StringFormat='{0:dd MMMM, yyyy}'}"/>
+                                            
+                                            <Frame Margin="0" 
+                                                   Padding="0" 
+                                                   HeightRequest="20" 
+                                                   WidthRequest="20" 
+                                                   CornerRadius="20" 
+                                                   HorizontalOptions="EndAndExpand"
+                                                   BackgroundColor="{Binding dueDate, Converter={StaticResource requiredStateConverter}}">
+                                                
+                                                <Frame Margin="3" 
+                                                       Padding="0" 
+                                                       HeightRequest="20" 
+                                                       WidthRequest="20" 
+                                                       CornerRadius="20" 
+                                                       BorderColor="White"
+                                                       BackgroundColor="{Binding receivedDate, Converter={StaticResource receivingStateConverter}}"/>
+                                                
+                                            </Frame>
+                                            
                                         </StackLayout>
 
 

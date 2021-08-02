@@ -213,6 +213,9 @@
   <data name="categoty" xml:space="preserve">
     <value>Category</value>
   </data>
+  <data name="changePassword" xml:space="preserve">
+    <value>Change password</value>
+  </data>
   <data name="city" xml:space="preserve">
     <value>City</value>
   </data>
@@ -254,6 +257,9 @@
   </data>
   <data name="createdSuccessfully" xml:space="preserve">
     <value>Created successfully</value>
+  </data>
+  <data name="currentPassword" xml:space="preserve">
+    <value>Current password</value>
   </data>
   <data name="daily" xml:space="preserve">
     <value>Daily</value>
@@ -336,6 +342,9 @@
   <data name="hello" xml:space="preserve">
     <value>Hello</value>
   </data>
+  <data name="help" xml:space="preserve">
+    <value>Help</value>
+  </data>
   <data name="hi" xml:space="preserve">
     <value>Hi</value>
   </data>
@@ -411,8 +420,14 @@
   <data name="nameSoShort" xml:space="preserve">
     <value>Name so short</value>
   </data>
+  <data name="newPassword" xml:space="preserve">
+    <value>New password</value>
+  </data>
   <data name="no" xml:space="preserve">
     <value>No</value>
+  </data>
+  <data name="notAccepted" xml:space="preserve">
+    <value>Not accepted</value>
   </data>
   <data name="notCorrect" xml:space="preserve">
     <value>Not correct</value>
@@ -569,6 +584,9 @@
   </data>
   <data name="somethingWrong" xml:space="preserve">
     <value>Something Wrong</value>
+  </data>
+  <data name="soShort" xml:space="preserve">
+    <value>So short</value>
   </data>
   <data name="sureToDelete" xml:space="preserve">
     <value>Are you sure to delete this item?</value>

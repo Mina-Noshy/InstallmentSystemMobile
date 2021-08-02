@@ -38,37 +38,37 @@
                                    Converter={StaticResource reverseValueConverter}}">
                     <!--name-->
                     <Label Text="{x:Static resx:AppResource.clientName}" FontAttributes="Bold" />
-                    <Label Text="{Binding name}" />
+                    <Label Text="{Binding name}" HorizontalOptions="End"/>
                     <controls:seperator/>
 
                     <!--address-->
                     <Label Text="{x:Static resx:AppResource.address}" FontAttributes="Bold" />
-                    <Label Text="{Binding address}" />
+                    <Label Text="{Binding address}" HorizontalOptions="End"/>
                     <controls:seperator/>
 
                     <!--phone1-->
                     <Label Text="{x:Static resx:AppResource.phone}" FontAttributes="Bold" />
-                    <Label Text="{Binding phone_1}" />
+                    <Label Text="{Binding phone_1}" HorizontalOptions="End"/>
                     <controls:seperator/>
 
                     <!--phone2-->
                     <Label Text="{x:Static resx:AppResource.phone}" FontAttributes="Bold" />
-                    <Label Text="{Binding phone_2}" />
+                    <Label Text="{Binding phone_2}" HorizontalOptions="End"/>
                     <controls:seperator/>
 
                     <!--phone3-->
                     <Label Text="{x:Static resx:AppResource.phone}" FontAttributes="Bold" />
-                    <Label Text="{Binding phone_3}" />
+                    <Label Text="{Binding phone_3}" HorizontalOptions="End"/>
                     <controls:seperator/>
 
                     <!--email-->
                     <Label Text="{x:Static resx:AppResource.email}" FontAttributes="Bold" />
-                    <Label Text="{Binding email}" />
+                    <Label Text="{Binding email}" HorizontalOptions="End"/>
                     <controls:seperator/>
 
                     <!--fax-->
                     <Label Text="{x:Static resx:AppResource.fax}" FontAttributes="Bold" />
-                    <Label Text="{Binding fax}" />
+                    <Label Text="{Binding fax}" HorizontalOptions="End"/>
 
                 </StackLayout>
 

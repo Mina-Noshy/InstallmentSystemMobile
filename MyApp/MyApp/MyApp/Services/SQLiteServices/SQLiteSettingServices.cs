@@ -9,9 +9,7 @@ namespace MyApp.Services.SQLiteServices
     public interface ISQLiteSettingServices
     {
         int Update(Setting setting);
-        int EditSettingsLastUpdet();
         Setting GetSetting();
-        bool IsSettingsUpdated();
     }
 
     public class SQLiteSettingServices : ISQLiteSettingServices
@@ -21,11 +19,6 @@ namespace MyApp.Services.SQLiteServices
         public Setting GetSetting()
         {
             return db.Table<Setting>().FirstOrDefault() ?? new Setting();
-        }
-
-        public bool IsSettingsUpdated()
-        {
-            return GetSetting().isSettingsUpdated();
         }
 
         public bool IsTokenExpired()
@@ -38,11 +31,5 @@ namespace MyApp.Services.SQLiteServices
             return db.Update(setting);
         }
 
-        public int EditSettingsLastUpdet()
-        {
-            Setting setting = GetSetting();
-            setting.settingsUpdatedAt = DateTime.UtcNow;
-            return Update(setting);
-        }
     }
 }

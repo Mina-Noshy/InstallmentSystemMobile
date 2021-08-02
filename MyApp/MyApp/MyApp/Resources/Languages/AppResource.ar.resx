@@ -213,6 +213,9 @@
   <data name="categoty" xml:space="preserve">
     <value>الصنف</value>
   </data>
+  <data name="changePassword" xml:space="preserve">
+    <value>تغيير كلمه المرور</value>
+  </data>
   <data name="city" xml:space="preserve">
     <value>المدينه</value>
   </data>
@@ -254,6 +257,9 @@
   </data>
   <data name="createdSuccessfully" xml:space="preserve">
     <value>تم الانشاء بنجاح</value>
+  </data>
+  <data name="currentPassword" xml:space="preserve">
+    <value>كلمه المرور الحاليه</value>
   </data>
   <data name="daily" xml:space="preserve">
     <value>يومى</value>
@@ -336,6 +342,9 @@
   <data name="hello" xml:space="preserve">
     <value>مرحبا</value>
   </data>
+  <data name="help" xml:space="preserve">
+    <value>مساعده</value>
+  </data>
   <data name="hi" xml:space="preserve">
     <value>اهلا</value>
   </data>
@@ -411,8 +420,14 @@
   <data name="nameSoShort" xml:space="preserve">
     <value>الاسم قصير جدا</value>
   </data>
+  <data name="newPassword" xml:space="preserve">
+    <value>كلمه المرور الجديده</value>
+  </data>
   <data name="no" xml:space="preserve">
     <value>لا</value>
+  </data>
+  <data name="notAccepted" xml:space="preserve">
+    <value>غير مقبول</value>
   </data>
   <data name="notCorrect" xml:space="preserve">
     <value>غير صحيح</value>
@@ -569,6 +584,9 @@
   </data>
   <data name="somethingWrong" xml:space="preserve">
     <value>حدث خطا ما</value>
+  </data>
+  <data name="soShort" xml:space="preserve">
+    <value>قصير جدا</value>
   </data>
   <data name="sureToDelete" xml:space="preserve">
     <value>هل انت متاكد من حذف هذا العنصر ؟</value>

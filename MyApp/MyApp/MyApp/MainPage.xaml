@@ -45,10 +45,10 @@
                         Text="{x:Static resx:AppResource.getStarted}"
                         Clicked="btnGetStarted_Clicked"/>
 
-                <Button x:Name="btnStart" 
+                <Button x:Name="btnHelp" 
                         BackgroundColor="Transparent"
-                        Text="{x:Static resx:AppResource.temporaryEntry}"
-                        Clicked="btnStart_Clicked"
+                        Text="{x:Static resx:AppResource.help}"
+                        Clicked="btnHelp_Clicked"
                         TextColor="{StaticResource middle-text}"/>
                 
             </StackLayout>

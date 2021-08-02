@@ -1,4 +1,5 @@
-﻿using MyApp.MVVM.Views.Bill;
+﻿using MyApp.MVVM.Views.Account;
+using MyApp.MVVM.Views.Bill;
 using MyApp.MVVM.Views.Client;
 using MyApp.MVVM.Views.Installment;
 using System;
@@ -22,6 +23,7 @@ namespace MyApp.MVVM.Views.Tabbed
             this.Children.Add(new ClientsPage { IconImageSource = "ic_fas_dollar_sign" });
             this.Children.Add(new BillsPage { IconImageSource = "ic_fas_plus_circle" });
             this.Children.Add(new InstallmentsPage { IconImageSource = "ic_fas_home" });
+            this.Children.Add(new AccountPage { IconImageSource = "ic_fas_home" });
             //if (isAuthorized)
             //    this.Children.Add(new AccountPage { IconImageSource = "ic_fas_profile" });
 

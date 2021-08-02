@@ -92,6 +92,7 @@ namespace MyApp.Helper
             _settings.firstName = _authModel.firstName;
             _settings.lastName = _authModel.lastName;
             _settings.stopAt = _authModel.stopAt;
+            _settings.phone = _authModel.phoneNumber;
 
             _settings.isAuthenticated = _authModel.isAuthenticated;
             _settings.token = _authModel.token;
@@ -111,12 +112,5 @@ namespace MyApp.Helper
             return _authModel;
         }
 
-        public static List<string> GetInstallmentTypes()
-        {
-            if (Lang == "ar")
-                return Enum.GetValues(typeof(InstallmentTypes)).Cast<string>().ToList();
-            else
-                return Enum.GetValues(typeof(InstallmentTypesEN)).Cast<string>().ToList();
-        }
     }
 }

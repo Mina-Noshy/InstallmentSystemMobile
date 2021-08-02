@@ -49,15 +49,23 @@ namespace MyApp.MVVM.Views.Installment
 
 
                 if (_details.delayFineType == InstallmentTypes.سنوى)
+                {
                     totalDelayFine = (int)(days / 365 * _details.delayFine);
+                    lblTotalDelayFine.Text = $"{days}/365x{_details.delayFine}={totalDelayFine}";
+                }
 
                 else if (_details.delayFineType == InstallmentTypes.شهرى)
+                {
                     totalDelayFine = (int)(days / 30 * _details.delayFine);
+                    lblTotalDelayFine.Text = $"{days}/30{_details.delayFine}={totalDelayFine}";
+                }
 
                 else
+                {
                     totalDelayFine = (int)(days * _details.delayFine);
+                    lblTotalDelayFine.Text = $"{days}x{_details.delayFine}={totalDelayFine}";
+                }
 
-                lblTotalDelayFine.Text = totalDelayFine.ToString();
                 lblTotalAmount.Text = ((int)(_details.amountValue + totalDelayFine)).ToString();
 
                 indicator.IsRunning = false;

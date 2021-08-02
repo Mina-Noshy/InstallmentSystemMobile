@@ -18,26 +18,31 @@
 
             <StackLayout>
                 <RadioButton x:Name="rdoAllUnReceived" 
+                             FontSize="{StaticResource font-md}"
                              Content="{x:Static resx:AppResource.allUnReceived}" 
                              GroupName="search" 
                              CheckedChanged="rdoAllUnReceived_CheckedChanged"/>
                 
                 <RadioButton x:Name="rdoAllToday" 
+                             FontSize="{StaticResource font-md}"
                              Content="{x:Static resx:AppResource.allToday}" 
                              GroupName="search"
                              CheckedChanged="rdoAllUnReceived_CheckedChanged"/>
                 
                 <RadioButton x:Name="rdoAllUnReceivedToday" 
+                             FontSize="{StaticResource font-md}"
                              Content="{x:Static resx:AppResource.allUnReceivedToday}" 
                              GroupName="search"
                              CheckedChanged="rdoAllUnReceived_CheckedChanged"/>
                 
                 <RadioButton x:Name="rdoAllReceivedToday" 
+                             FontSize="{StaticResource font-md}"
                              Content="{x:Static resx:AppResource.allReceivedToday}" 
                              GroupName="search"
                              CheckedChanged="rdoAllUnReceived_CheckedChanged"/>
                 
                 <RadioButton x:Name="rdoAllInDay" 
+                             FontSize="{StaticResource font-md}"
                              Content="{x:Static resx:AppResource.allInDay}" 
                              GroupName="search"
                              CheckedChanged="rdoAllUnReceived_CheckedChanged"/>
@@ -46,7 +51,7 @@
                        IsVisible="{Binding Source={x:Reference rdoAllInDay}, Path=IsChecked}"
                        BorderColor="{StaticResource border-dark}">
                     <StackLayout Orientation="Horizontal">
-                        <DatePicker x:Name="picDay" Format="dd/MM/yyyy" HorizontalOptions="FillAndExpand"/>
+                        <DatePicker x:Name="picDay" Format="dd/MM/yyyy" HorizontalOptions="StartAndExpand"/>
                         <control:button_sm x:Name="btnSearch" 
                                            WidthRequest="80" 
                                            HorizontalOptions="End" 
@@ -65,9 +70,8 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-
                             <Frame BackgroundColor="{StaticResource secondary}"
-                                   BorderColor="{Binding receivedDate, Converter={StaticResource receivingStateConverter}}"
+                                   BorderColor="{StaticResource border-light}"
                                    CornerRadius="5"
                                    Margin="2"
                                    Padding="5"
@@ -77,7 +81,8 @@
 
                                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
                                         <Label FontAttributes="Bold"
-                                               TextColor="{Binding dueDate, Converter={StaticResource requiredStateConverter}}">
+                                               HorizontalOptions="Start"
+                                               TextColor="{StaticResource primary-text}">
                                             <Label.Text>
                                                 <MultiBinding StringFormat="{}{0} ({1})">
                                                     <Binding Path="client" />
@@ -92,6 +97,25 @@
 
                                             <Label TextColor="{StaticResource secondary-text}"
                                                Text="{Binding receivedDate, StringFormat='{0:dd MMMM, yyyy}'}"/>
+
+                                            <Frame Margin="0" 
+                                                   Padding="0" 
+                                                   HeightRequest="20" 
+                                                   WidthRequest="20" 
+                                                   CornerRadius="20" 
+                                                   HorizontalOptions="EndAndExpand"
+                                                   BackgroundColor="{Binding dueDate, Converter={StaticResource requiredStateConverter}}">
+
+                                                <Frame Margin="3" 
+                                                       Padding="0" 
+                                                       HeightRequest="20" 
+                                                       WidthRequest="20" 
+                                                       CornerRadius="20" 
+                                                       BorderColor="White"
+                                                       BackgroundColor="{Binding receivedDate, Converter={StaticResource receivingStateConverter}}"/>
+
+                                            </Frame>
+
                                         </StackLayout>
 
 

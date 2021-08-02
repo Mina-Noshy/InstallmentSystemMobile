@@ -2,6 +2,7 @@
 using MyApp.MVVM.Views;
 using MyApp.MVVM.Views.Account;
 using MyApp.MVVM.Views.Tabbed;
+using MyApp.Services.APIServices;
 using MyApp.Services.SQLiteServices;
 using System;
 using System.Collections.Generic;
@@ -18,12 +19,14 @@ namespace MyApp
     public partial class MainPage : ContentPage
     {
         SQLiteSettingServices sqlSetting;
+        AccountServices apiAccount;
 
         public MainPage()
         {
             InitializeComponent();
 
             sqlSetting = new SQLiteSettingServices();
+            apiAccount = new AccountServices();
         }
 
         protected override void OnAppearing()
@@ -61,20 +64,37 @@ namespace MyApp
             if (sqlSetting.GetSetting().isAuthenticated)
             {
                 // when be false then this user not approved by admin yet.
-                if (string.IsNullOrEmpty(sqlSetting.GetSetting().roles))
+                if (sqlSetting.GetSetting().stopAt <= DateTime.UtcNow)
                 {
-                    indicator.IsRunning = true;
+                    if (EastariaHelper.IsOnline())
+                    {
+                        indicator.IsRunning = true;
 
-                    await EastariaHelper.GetToken();
+                        DateTime _date = await apiAccount.GetUserStoppedDate(sqlSetting.GetSetting().userId);
 
-                    indicator.IsRunning = false;
+                        indicator.IsRunning = false;
 
-                    if (string.IsNullOrEmpty(sqlSetting.GetSetting().roles))
+                        // when be false then this user not approved by admin yet.
+                        if (_date <= DateTime.UtcNow)
+                        {
+                            await DisplayAlert("", resx.AppResource.pleaseCallToActivateAccount, resx.AppResource.ok);
+                            return;
+                        }
+
+                        if (_date.Date != sqlSetting.GetSetting().stopAt.Value.Date)
+                        {
+                            var _settings = sqlSetting.GetSetting();
+                            _settings.stopAt = _date;
+                            sqlSetting.Update(_settings);
+                        }
+
+                    }
+                    else
                     {
                         await DisplayAlert("", resx.AppResource.pleaseCallToActivateAccount, resx.AppResource.ok);
-
                         return;
                     }
+                   
                 }
 
                 if (sqlSetting.IsTokenExpired())
@@ -102,9 +122,9 @@ namespace MyApp
 
         }
 
-        private void btnStart_Clicked(object sender, EventArgs e)
+        async void btnHelp_Clicked(object sender, EventArgs e)
         {
-            Application.Current.MainPage = new NavigationPage(new LoginPage());
+            await DisplayAlert("", "config it", "ok");
         }
     }
 }

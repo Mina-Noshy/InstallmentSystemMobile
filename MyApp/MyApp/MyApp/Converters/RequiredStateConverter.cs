@@ -11,11 +11,11 @@ namespace MyApp.Converters
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
             if (value is null)
-                return "#1a1a1a";
+                return "#28a745";
             else if ((DateTime)value <= DateTime.Now)
                 return "#dc3545";
             else
-                return "#1a1a1a";
+                return "#28a745";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
