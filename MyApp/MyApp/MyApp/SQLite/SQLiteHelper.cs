@@ -31,6 +31,7 @@ namespace MyApp.SQLite
             Connection.CreateTable<Client>(CreateFlags.None);
             Connection.CreateTable<Bill>(CreateFlags.None);
             Connection.CreateTable<Installment>(CreateFlags.None);
+            Connection.CreateTable<User>(CreateFlags.None);
 
             InitialDb();
 

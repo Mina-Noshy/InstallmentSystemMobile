@@ -6,6 +6,7 @@
              android:TabbedPage.ToolbarPlacement="Bottom"
              BarTextColor="{StaticResource bar-text}"
              BarBackgroundColor="{StaticResource bar-bg}"
+             BackgroundImageSource="background.jpg"
              FlowDirection="{x:Static Device.FlowDirection}">
     
 

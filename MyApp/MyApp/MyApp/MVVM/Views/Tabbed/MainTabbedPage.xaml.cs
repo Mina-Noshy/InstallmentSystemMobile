@@ -1,4 +1,5 @@
 ﻿using MyApp.MVVM.Views.Account;
+using MyApp.MVVM.Views.Admin;
 using MyApp.MVVM.Views.Bill;
 using MyApp.MVVM.Views.Client;
 using MyApp.MVVM.Views.Installment;
@@ -16,7 +17,7 @@ namespace MyApp.MVVM.Views.Tabbed
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class MainTabbedPage : TabbedPage
     {
-        public MainTabbedPage()
+        public MainTabbedPage(bool isAdmin)
         {
             InitializeComponent();
 
@@ -24,8 +25,8 @@ namespace MyApp.MVVM.Views.Tabbed
             this.Children.Add(new BillsPage { IconImageSource = "ic_fas_plus_circle" });
             this.Children.Add(new InstallmentsPage { IconImageSource = "ic_fas_home" });
             this.Children.Add(new AccountPage { IconImageSource = "ic_fas_home" });
-            //if (isAuthorized)
-            //    this.Children.Add(new AccountPage { IconImageSource = "ic_fas_profile" });
+            if (isAdmin)
+                this.Children.Add(new UsersPage { IconImageSource = "ic_fas_profile" });
 
         }
 

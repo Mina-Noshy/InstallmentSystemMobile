@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyApp.MVVM.Views.Account.AccountPage"
              BackgroundColor="{StaticResource primary}"
+             BackgroundImageSource="background.jpg"
              xmlns:controls="clr-namespace:MyApp.Controls;assembly=MyApp"
              xmlns:resx="clr-namespace:MyApp.Resources.Languages;assembly=MyApp"
              Title="{x:Static resx:AppResource.account}"
@@ -22,8 +23,8 @@
                 <Label Text="{x:Static resx:AppResource.personalInfo}"
                        HorizontalOptions="Center"
                        FontSize="Title"/>
-                <StackLayout>
-                    <Label Text="hint: acc expire at 22 june 2021 after 22 days."/>
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="lblExpire" Text="" HorizontalTextAlignment="Center"/>
                 </StackLayout>
             </StackLayout>
 

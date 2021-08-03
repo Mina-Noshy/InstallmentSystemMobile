@@ -20,6 +20,9 @@ namespace MyApp.MVVM.Views.Account {
         private global::Xamarin.Forms.ToolbarItem toolBarItem;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Label lblExpire;
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.ActivityIndicator indicator;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
@@ -50,6 +53,7 @@ namespace MyApp.MVVM.Views.Account {
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(AccountPage));
             toolBarItem = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ToolbarItem>(this, "toolBarItem");
+            lblExpire = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Label>(this, "lblExpire");
             indicator = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.ActivityIndicator>(this, "indicator");
             txtUserName = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.entry>(this, "txtUserName");
             txtEmail = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::MyApp.Controls.entry>(this, "txtEmail");

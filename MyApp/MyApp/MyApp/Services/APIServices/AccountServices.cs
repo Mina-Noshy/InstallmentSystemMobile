@@ -1,4 +1,5 @@
 ﻿using MyApp.Helper;
+using MyApp.MVVM.Models;
 using MyApp.MVVM.ViewModels;
 using Newtonsoft.Json;
 using System;
@@ -17,6 +18,9 @@ namespace MyApp.Services.APIServices
         Task<DateTime> GetUserStoppedDate(string userId);
         Task<ResponseVM> UpdateUserInfo(UpdateUserInfoVM model);
         Task<ResponseVM> UpdateUserPassword(UpdateUserPasswordVM model);
+
+        Task<List<User>> GetAllUsers();
+        Task<UserVM> GetUserDetails(string userId);
     }
 
     public class AccountServices : IAccountServices
@@ -30,6 +34,14 @@ namespace MyApp.Services.APIServices
             };
         }
 
+        public async Task<List<User>> GetAllUsers()
+        {
+            var response = await httpClient.GetAsync("Account/GetAllUsersVM");
+
+            var stringObj = await response.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<List<User>>(stringObj);
+        }
+
         public async Task<AuthenticationVM> GetToken(LoginVM model)
         {
             var json = JsonConvert.SerializeObject(model);
@@ -38,6 +50,14 @@ namespace MyApp.Services.APIServices
 
             var stringObj = await response.Content.ReadAsStringAsync();
             return JsonConvert.DeserializeObject<AuthenticationVM>(stringObj);
+        }
+
+        public async Task<UserVM> GetUserDetails(string userId)
+        {
+            var response = await httpClient.GetAsync($"Account/GetUserDetailsVM/{userId}");
+
+            var stringObj = await response.Content.ReadAsStringAsync();
+            return JsonConvert.DeserializeObject<UserVM>(stringObj);
         }
 
         public async Task<DateTime> GetUserStoppedDate(string userId)

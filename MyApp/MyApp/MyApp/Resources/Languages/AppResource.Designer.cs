@@ -178,6 +178,24 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Admin.
+        /// </summary>
+        internal static string admin {
+            get {
+                return ResourceManager.GetString("admin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to After.
+        /// </summary>
+        internal static string after {
+            get {
+                return ResourceManager.GetString("after", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to All installments at day.
         /// </summary>
         internal static string allInDay {
@@ -502,6 +520,15 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Days.
+        /// </summary>
+        internal static string days {
+            get {
+                return ResourceManager.GetString("days", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Days of delay.
         /// </summary>
         internal static string daysOfDelay {
@@ -660,6 +687,15 @@ namespace MyApp.Resources.Languages {
         internal static string empty {
             get {
                 return ResourceManager.GetString("empty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Expire at.
+        /// </summary>
+        internal static string expireAt {
+            get {
+                return ResourceManager.GetString("expireAt", resourceCulture);
             }
         }
         
@@ -1564,6 +1600,15 @@ namespace MyApp.Resources.Languages {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to User.
+        /// </summary>
+        internal static string user {
+            get {
+                return ResourceManager.GetString("user", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Username.
         /// </summary>
         internal static string username {
@@ -1578,6 +1623,15 @@ namespace MyApp.Resources.Languages {
         internal static string userOrPassIncorrect {
             get {
                 return ResourceManager.GetString("userOrPassIncorrect", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Users.
+        /// </summary>
+        internal static string users {
+            get {
+                return ResourceManager.GetString("users", resourceCulture);
             }
         }
         

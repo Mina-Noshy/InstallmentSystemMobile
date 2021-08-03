@@ -156,6 +156,12 @@
   <data name="addShop" xml:space="preserve">
     <value>اضافه محل</value>
   </data>
+  <data name="admin" xml:space="preserve">
+    <value>ادمن</value>
+  </data>
+  <data name="after" xml:space="preserve">
+    <value>بعد</value>
+  </data>
   <data name="allInDay" xml:space="preserve">
     <value>كل الاقساط فى يوم</value>
   </data>
@@ -264,6 +270,9 @@
   <data name="daily" xml:space="preserve">
     <value>يومى</value>
   </data>
+  <data name="days" xml:space="preserve">
+    <value>ايام</value>
+  </data>
   <data name="daysOfDelay" xml:space="preserve">
     <value>ايام التأخير</value>
   </data>
@@ -317,6 +326,9 @@
   </data>
   <data name="empty" xml:space="preserve">
     <value>فارغ</value>
+  </data>
+  <data name="expireAt" xml:space="preserve">
+    <value>ينتهى فى</value>
   </data>
   <data name="fax" xml:space="preserve">
     <value>فاكس</value>
@@ -618,11 +630,17 @@
   <data name="updatedSuccessfully" xml:space="preserve">
     <value>تم التحديث بنجاح</value>
   </data>
+  <data name="user" xml:space="preserve">
+    <value>المستخدم</value>
+  </data>
   <data name="username" xml:space="preserve">
     <value>اسم المستخدم</value>
   </data>
   <data name="userOrPassIncorrect" xml:space="preserve">
     <value>اسم المستخدم او كلمه المرور غير صحيحه</value>
+  </data>
+  <data name="users" xml:space="preserve">
+    <value>المستخدمين</value>
   </data>
   <data name="userType" xml:space="preserve">
     <value>نوع المستخدم</value>

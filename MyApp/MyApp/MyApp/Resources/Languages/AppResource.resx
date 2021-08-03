@@ -156,6 +156,12 @@
   <data name="addShop" xml:space="preserve">
     <value>Add Shop</value>
   </data>
+  <data name="admin" xml:space="preserve">
+    <value>Admin</value>
+  </data>
+  <data name="after" xml:space="preserve">
+    <value>After</value>
+  </data>
   <data name="allInDay" xml:space="preserve">
     <value>All installments at day</value>
   </data>
@@ -264,6 +270,9 @@
   <data name="daily" xml:space="preserve">
     <value>Daily</value>
   </data>
+  <data name="days" xml:space="preserve">
+    <value>Days</value>
+  </data>
   <data name="daysOfDelay" xml:space="preserve">
     <value>Days of delay</value>
   </data>
@@ -317,6 +326,9 @@
   </data>
   <data name="empty" xml:space="preserve">
     <value>Empty</value>
+  </data>
+  <data name="expireAt" xml:space="preserve">
+    <value>Expire at</value>
   </data>
   <data name="fax" xml:space="preserve">
     <value>Fax</value>
@@ -618,11 +630,17 @@
   <data name="updatedSuccessfully" xml:space="preserve">
     <value>Updated successfully</value>
   </data>
+  <data name="user" xml:space="preserve">
+    <value>User</value>
+  </data>
   <data name="username" xml:space="preserve">
     <value>Username</value>
   </data>
   <data name="userOrPassIncorrect" xml:space="preserve">
     <value>Username or password incorrect</value>
+  </data>
+  <data name="users" xml:space="preserve">
+    <value>Users</value>
   </data>
   <data name="userType" xml:space="preserve">
     <value>User Type</value>

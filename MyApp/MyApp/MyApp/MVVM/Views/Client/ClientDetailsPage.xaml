@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MyApp.MVVM.Views.Client.ClientDetailsPage"
              BackgroundColor="{StaticResource primary}"
+             BackgroundImageSource="background.jpg"
              xmlns:controls="clr-namespace:MyApp.Controls;assembly=MyApp"
              xmlns:resx="clr-namespace:MyApp.Resources.Languages;assembly=MyApp"
              Title="{x:Static resx:AppResource.clientDetails}"

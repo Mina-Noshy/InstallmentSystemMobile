@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyApp.MVVM.Views.Client.ClientBillsPage"
+             x:Class="MyApp.MVVM.Views.Admin.UsersPage"
              BackgroundColor="{StaticResource primary}"
              BackgroundImageSource="background.jpg"
              xmlns:control="clr-namespace:MyApp.Controls;assembly=MyApp"
              xmlns:resx="clr-namespace:MyApp.Resources.Languages;assembly=MyApp"
-             Title="{x:Static resx:AppResource.clientBills}"
+             Title="{x:Static resx:AppResource.users}"
              FlowDirection="{x:Static Device.FlowDirection}">
 
     <ContentPage.ToolbarItems>
@@ -16,16 +16,24 @@
     <ScrollView>
         <StackLayout>
 
-            <StackLayout HorizontalOptions="Fill" Padding="30" BackgroundColor="{StaticResource secondary}">
-                <Label Text="{x:Static resx:AppResource.clientBills}"
-                       HorizontalOptions="Center"
-                       FontSize="Title"/>
-            </StackLayout>
+            <Frame Padding="1" 
+                    BorderColor="{StaticResource border-light}" 
+                    VerticalOptions="Center" HeightRequest="40">
 
-            <ListView x:Name="lstBills" 
+                <SearchBar x:Name="txtSearch" 
+                            Placeholder="{x:Static resx:AppResource.writeHereToSearch}"
+                            PlaceholderColor="{StaticResource secondary-text}"
+                            TextColor="{StaticResource primary-text}"
+                            SearchButtonPressed="txtSearch_SearchButtonPressed"
+                            TextChanged="txtSearch_TextChanged"/>
+            </Frame>
+
+            <ListView x:Name="lstUsers" 
                       HasUnevenRows="True" 
                       SelectionMode="Single"
-                      ItemSelected="lstBills_ItemSelected">
+                      ItemSelected="lstUsers_ItemSelected"
+                      IsPullToRefreshEnabled="True"
+                      Refreshing="lstUsers_Refreshing">
 
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -41,23 +49,13 @@
                                 <StackLayout Orientation="Horizontal">
 
                                     <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                                        <Label Text="{Binding client}" 
+                                        <Label Text="{Binding fullName}" 
                                                HorizontalOptions="Start"
                                                FontAttributes="Bold"
                                                TextColor="{StaticResource primary-text}"/>
 
-                                        <Label>
-                                            <Label.Text>
-                                                <MultiBinding StringFormat="{}{0} ~ {1} ~ {2} ~ {3}% ~ {4}">
-                                                    <Binding Path="originalAmount" />
-                                                    <Binding Path="amountPaid" />
-                                                    <Binding Path="restAmount" />
-                                                    <Binding Path="percentage" />
-                                                    <Binding Path="totalAmount" />
-                                                </MultiBinding>
-                                            </Label.Text>
-                                        </Label>
-
+                                        <Label Text="{Binding email}"
+                                               TextColor="{StaticResource secondary-text}"/>
                                     </StackLayout>
 
                                 </StackLayout>
@@ -69,8 +67,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
         </StackLayout>
     </ScrollView>
-    
+ 
 </ContentPage>

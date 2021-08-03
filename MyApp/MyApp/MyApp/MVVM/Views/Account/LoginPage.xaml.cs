@@ -93,21 +93,23 @@ namespace MyApp.MVVM.Views.Account
                 return;
             }
 
-            if (_authModel.roles is null)
-            {
-                await DisplayAlert("", resx.AppResource.pleaseCallToActivateAccount, resx.AppResource.ok);
-                return;
-            }
+            //if (_authModel.roles is null)
+            //{
+            //    await DisplayAlert("", resx.AppResource.pleaseCallToActivateAccount, resx.AppResource.ok);
+            //    return;
+            //}
 
-            if (_authModel.roles.Count == 0)
-            {
-                await DisplayAlert("", resx.AppResource.pleaseCallToActivateAccount, resx.AppResource.ok);
-                return;
-            }
+            //if (_authModel.roles.Count == 0)
+            //{
+            //    await DisplayAlert("", resx.AppResource.pleaseCallToActivateAccount, resx.AppResource.ok);
+            //    return;
+            //}
 
             await DisplayAlert("", resx.AppResource.welcome + " " + _authModel.firstName, resx.AppResource.login);
 
-            Application.Current.MainPage = new NavigationPage(new MainTabbedPage());
+            string _roles = string.Join(",", _authModel.roles);
+
+            Application.Current.MainPage = new NavigationPage(new MainTabbedPage(IsInRole(_authModel.roles, "admin")));
 
 
         }
@@ -168,21 +170,21 @@ namespace MyApp.MVVM.Views.Account
                     return;
                 }
 
-                if (_authModel.roles is null)
-                {
-                    await DisplayAlert("", resx.AppResource.pleaseCallToActivateAccount, resx.AppResource.ok);
-                    return;
-                }
+                //if (_authModel.roles is null)
+                //{
+                //    await DisplayAlert("", resx.AppResource.pleaseCallToActivateAccount, resx.AppResource.ok);
+                //    return;
+                //}
 
-                if (_authModel.roles.Count == 0)
-                {
-                    await DisplayAlert("", resx.AppResource.pleaseCallToActivateAccount, resx.AppResource.ok);
-                    return;
-                }
+                //if (_authModel.roles.Count == 0)
+                //{
+                //    await DisplayAlert("", resx.AppResource.pleaseCallToActivateAccount, resx.AppResource.ok);
+                //    return;
+                //}
 
                 await DisplayAlert("", resx.AppResource.welcome + " " + _authModel.firstName, resx.AppResource.login);
 
-                Application.Current.MainPage = new NavigationPage(new MainTabbedPage());
+                Application.Current.MainPage = new NavigationPage(new MainTabbedPage(IsInRole(_authModel.roles, "admin")));
             }
             else
             {
@@ -235,6 +237,15 @@ namespace MyApp.MVVM.Views.Account
             txtConfirmPassword.IsPassword = !txtConfirmPassword.IsPassword;
             btnConfirm.Source = txtConfirmPassword.IsPassword ? ImageSource.FromFile("ic_fas_eye") : ImageSource.FromFile("ic_fas_eye_slash");
 
+        }
+
+        private bool IsInRole(List<string> lst, string role)
+        {
+            if (lst is null)
+                return false;
+
+            string txt = string.Join(",", lst);
+            return txt.ToLower().Contains(role.ToLower());
         }
     }
 }

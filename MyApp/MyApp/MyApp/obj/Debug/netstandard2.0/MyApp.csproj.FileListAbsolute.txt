@@ -47,5 +47,6 @@ D:\projects\mobile\InstallmentSystemMobile\MyApp\MyApp\MyApp\obj\Debug\netstanda
 D:\projects\mobile\InstallmentSystemMobile\MyApp\MyApp\MyApp\obj\Debug\netstandard2.0\MyApp.dll
 D:\projects\mobile\InstallmentSystemMobile\MyApp\MyApp\MyApp\obj\Debug\netstandard2.0\ref\MyApp.dll
 D:\projects\mobile\InstallmentSystemMobile\MyApp\MyApp\MyApp\obj\Debug\netstandard2.0\MyApp.pdb
-D:\projects\mobile\InstallmentSystemMobile\MyApp\MyApp\MyApp\obj\Debug\netstandard2.0\MyApp.csproj.AssemblyReference.cache
 D:\projects\mobile\InstallmentSystemMobile\MyApp\MyApp\MyApp\obj\Debug\netstandard2.0\MVVM\Views\Account\ChangePasswordPage.xaml.g.cs
+D:\projects\mobile\InstallmentSystemMobile\MyApp\MyApp\MyApp\obj\Debug\netstandard2.0\MVVM\Views\Admin\UserDetailsPage.xaml.g.cs
+D:\projects\mobile\InstallmentSystemMobile\MyApp\MyApp\MyApp\obj\Debug\netstandard2.0\MVVM\Views\Admin\UsersPage.xaml.g.cs

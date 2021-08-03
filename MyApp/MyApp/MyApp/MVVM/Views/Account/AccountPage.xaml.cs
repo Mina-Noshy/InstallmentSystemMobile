@@ -34,11 +34,25 @@ namespace MyApp.MVVM.Views.Account
 
             var _setting = sqlSetting.GetSetting();
 
+            
             txtUserName.Text = _setting.userName;
             txtEmail.Text = _setting.email;
             txtPhone.Text = _setting.phone;
             txtFirstName.Text = _setting.firstName;
             txtLastName.Text = _setting.lastName;
+
+            int _days = 0;
+
+            if(_setting.stopAt.Value.Date > DateTime.UtcNow.Date)
+            {
+                var _span = _setting.stopAt.Value.Date - DateTime.UtcNow.Date;
+                _days = (int)_span.TotalDays;
+            }
+
+            lblExpire.Text = resx.AppResource.account + " " + resx.AppResource.expireAt + " " +
+                _setting.stopAt.Value.ToString("yyyy-MM-dd") + " " + resx.AppResource.after + " " +
+                _days + " " + resx.AppResource.days;
+
         }
 
         async void btnSave_Clicked(object sender, EventArgs e)

@@ -115,7 +115,8 @@ namespace MyApp
                     }
                 }
                 else
-                    Application.Current.MainPage = new NavigationPage(new MainTabbedPage());
+                    Application.Current.MainPage = new NavigationPage(new 
+                        MainTabbedPage(IsInRole(sqlSetting.GetSetting().roles, "admin")));
             }
             else
                 Application.Current.MainPage = new NavigationPage(new LoginPage());
@@ -125,6 +126,14 @@ namespace MyApp
         async void btnHelp_Clicked(object sender, EventArgs e)
         {
             await DisplayAlert("", "config it", "ok");
+        }
+
+        private bool IsInRole(string listRoles, string role)
+        {
+            if (string.IsNullOrEmpty(listRoles))
+                return false;
+
+            return listRoles.ToLower().Contains(role.ToLower());
         }
     }
 }
